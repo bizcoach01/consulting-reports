@@ -1,43 +1,190 @@
 <!DOCTYPE html>
+
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>소상공인 컨설팅 보고서</title>
+
 <style>
-:root{--blue:#0b57d0;--navy:#0f172a;--muted:#667085;--line:#e5e7eb;--bg:#f6f8fb}
-*{box-sizing:border-box}
-body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR",sans-serif;background:var(--bg);color:var(--navy)}
-.wrap{max-width:980px;margin:0 auto;padding:64px 22px}
-.kicker{font-size:14px;font-weight:800;color:var(--blue);letter-spacing:.08em}
-h1{font-size:42px;letter-spacing:-1.6px;margin:8px 0 12px}
-.lead{color:var(--muted);font-size:18px;line-height:1.7;margin-bottom:34px}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.card{display:block;text-decoration:none;color:inherit;background:#fff;border:1px solid var(--line);border-radius:22px;padding:26px;box-shadow:0 10px 30px rgba(15,23,42,.05);transition:.2s}
-.card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(15,23,42,.09)}
-.badge{display:inline-block;background:#eef4ff;color:var(--blue);padding:6px 10px;border-radius:999px;font-size:12px;font-weight:800}
-.card h2{font-size:22px;margin:18px 0 8px}.card p{color:var(--muted);margin:0}
-.foot{margin-top:36px;color:#98a2b3;font-size:13px}
-@media(max-width:720px){h1{font-size:32px}.grid{grid-template-columns:1fr}.wrap{padding-top:38px}}
+:root{
+  --blue:#0b57d0;
+  --navy:#0f172a;
+  --muted:#667085;
+  --line:#e5e7eb;
+  --bg:#f6f8fb;
+}
+
+*{
+  box-sizing:border-box;
+}
+
+body{
+  margin:0;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR",sans-serif;
+  background:var(--bg);
+  color:var(--navy);
+}
+
+.wrap{
+  max-width:980px;
+  margin:0 auto;
+  padding:64px 22px;
+}
+
+.kicker{
+  font-size:14px;
+  font-weight:800;
+  color:var(--blue);
+  letter-spacing:.08em;
+}
+
+h1{
+  font-size:42px;
+  letter-spacing:-1.6px;
+  margin:8px 0 12px;
+}
+
+.lead{
+  color:var(--muted);
+  font-size:18px;
+  line-height:1.7;
+  margin-bottom:34px;
+}
+
+/* 4개 보고서가 보기 좋게 2열로 배치 */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:18px;
+}
+
+.card{
+  display:block;
+  text-decoration:none;
+  color:inherit;
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:22px;
+  padding:26px;
+  box-shadow:0 10px 30px rgba(15,23,42,.05);
+  transition:.2s;
+}
+
+.card:hover{
+  transform:translateY(-4px);
+  box-shadow:0 16px 40px rgba(15,23,42,.09);
+}
+
+.badge{
+  display:inline-block;
+  background:#eef4ff;
+  color:var(--blue);
+  padding:6px 10px;
+  border-radius:999px;
+  font-size:12px;
+  font-weight:800;
+}
+
+.card h2{
+  font-size:22px;
+  margin:18px 0 8px;
+}
+
+.card p{
+  color:var(--muted);
+  margin:0;
+  line-height:1.6;
+}
+
+.foot{
+  margin-top:36px;
+  color:#98a2b3;
+  font-size:13px;
+}
+
+@media(max-width:720px){
+
+  h1{
+    font-size:32px;
+  }
+
+  .grid{
+    grid-template-columns:1fr;
+  }
+
+  .wrap{
+    padding-top:38px;
+  }
+}
 </style>
+
 </head>
+
 <body>
+
 <main class="wrap">
+
   <div class="kicker">CONSULTING REPORTS</div>
+
   <h1>소상공인 컨설팅 보고서</h1>
-  <p class="lead">온라인 마케팅 현황, 경쟁 분석, 실행 전략을 매장별로 정리한 컨설팅 결과물입니다.</p>
+
+  <p class="lead">
+    온라인 마케팅 현황, 경쟁 분석, 실행 전략을
+    매장별로 정리한 컨설팅 결과물입니다.
+  </p>
+
   <section class="grid">
-    <a class="card" href="./pungmu/">
-      <span class="badge">REPORT</span><h2>풍무</h2><p>정관장 김포 풍무점 컨설팅 보고서</p>
-    </a>
-    <a class="card" href="./cheongdam/">
-      <span class="badge">REPORT</span><h2>청담카페</h2><p>경쟁·가격·온라인 마케팅 컨설팅 보고서</p>
-    </a>
-    <a class="card" href="./comodo/">
-      <span class="badge">NEW</span><h2>꼬모도블루</h2><p>온라인 마케팅 현황 및 3개월 실행 전략</p>
-    </a>
+
+```
+<!-- 1. 풍무 -->
+<a class="card" href="./pungmu/">
+  <span class="badge">REPORT</span>
+  <h2>정관장 풍무점</h2>
+  <p>
+    온라인 마케팅 현황, 경쟁분석,
+    네이버플레이스 판매형 개편 및 실행전략
+  </p>
+</a>
+
+<!-- 2. 청담카페 -->
+<a class="card" href="./cheongdam/">
+  <span class="badge">REPORT</span>
+  <h2>청담카페</h2>
+  <p>
+    경쟁·가격전략·온라인 마케팅 분석 및
+    매출 개선 컨설팅 보고서
+  </p>
+</a>
+
+<!-- 3. 꼬모도블루 -->
+<a class="card" href="./comodo/">
+  <span class="badge">REPORT</span>
+  <h2>꼬모도블루</h2>
+  <p>
+    온라인 마케팅 현황 분석 및
+    3개월 온라인 마케팅 실행전략
+  </p>
+</a>
+
+<!-- 4. 팔도우리술 -->
+<a class="card" href="./pal/">
+  <span class="badge">NEW</span>
+  <h2>팔도우리술 보틀샵</h2>
+  <p>
+    온라인 마케팅 현황, 경쟁분석 및
+    네이버플레이스 판매형 개편 컨설팅
+  </p>
+</a>
+```
+
   </section>
-  <div class="foot">© 2026 Small Business Consulting Reports</div>
+
+  <div class="foot">
+    © 2026 Small Business Consulting Reports
+  </div>
+
 </main>
+
 </body>
 </html>
