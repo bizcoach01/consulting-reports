@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>팔도우리술보틀샵 네이버 플레이스 판매형 개편안</title>
+<style>
+:root{
+  --bg:#f5f1e9;
+  --paper:#fff;
+  --text:#171717;
+  --muted:#5e5e5e;
+  --line:#d8d0c4;
+  --accent:#6f2f24;
+  --accent-soft:#efe3d8;
+  --green:#205f43;
+  --gold:#9a6a12;
+  --shadow:0 10px 28px rgba(0,0,0,.08);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:"Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",Arial,sans-serif;
+  font-size:20px;
+  line-height:1.85;
+  letter-spacing:-0.01em;
+}
+.wrap{max-width:1100px;margin:0 auto;padding:34px 22px 72px}
+.hero,.section{
+  background:var(--paper);
+  border-radius:22px;
+  box-shadow:var(--shadow);
+}
+.hero{
+  padding:48px 44px;
+  border-top:8px solid var(--accent);
+  margin-bottom:26px;
+}
+.section{
+  padding:36px 38px;
+  margin-bottom:24px;
+}
+.eyebrow{
+  color:var(--accent);
+  font-weight:900;
+  font-size:18px;
+  margin-bottom:8px;
+}
+h1{
+  font-size:44px;
+  line-height:1.28;
+  letter-spacing:-0.035em;
+  margin:0 0 18px;
+}
+h2{
+  font-size:32px;
+  line-height:1.38;
+  letter-spacing:-0.025em;
+  margin:0 0 20px;
+}
+h3{
+  font-size:25px;
+  line-height:1.45;
+  margin:30px 0 14px;
+}
+p{margin:0 0 18px}
+strong{font-weight:900}
+.meta{font-size:18px;color:var(--muted)}
+.key{
+  background:var(--accent-soft);
+  border-left:8px solid var(--accent);
+  border-radius:14px;
+  padding:22px 24px;
+  font-size:24px;
+  font-weight:850;
+  line-height:1.65;
+  margin:20px 0;
+}
+.quote{
+  background:#f3f3f3;
+  border-left:8px solid #333;
+  border-radius:12px;
+  padding:22px 24px;
+  font-size:24px;
+  font-weight:800;
+  margin:22px 0;
+}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:18px;
+}
+.card{
+  border:1px solid var(--line);
+  border-radius:16px;
+  padding:22px;
+  background:#fff;
+}
+.card b{
+  display:block;
+  color:var(--accent);
+  font-size:21px;
+  margin-bottom:8px;
+}
+table{
+  width:100%;
+  border-collapse:separate;
+  border-spacing:0;
+  border:1px solid var(--line);
+  border-radius:14px;
+  overflow:hidden;
+  margin:20px 0 8px;
+  font-size:18px;
+}
+th,td{
+  padding:16px 14px;
+  vertical-align:top;
+  border-bottom:1px solid var(--line);
+}
+th{
+  background:#eee7dc;
+  font-weight:900;
+  text-align:left;
+}
+tr:last-child td{border-bottom:none}
+ul{padding-left:1.2em;margin:12px 0 18px}
+li{margin:8px 0}
+.step{
+  display:flex;
+  gap:16px;
+  align-items:flex-start;
+  padding:17px 0;
+  border-bottom:1px dashed var(--line);
+}
+.step:last-child{border-bottom:none}
+.num{
+  width:44px;height:44px;flex:0 0 44px;
+  display:flex;align-items:center;justify-content:center;
+  border-radius:50%;
+  background:var(--accent);
+  color:#fff;
+  font-weight:900;
+}
+.big{
+  font-size:26px;
+  font-weight:900;
+  line-height:1.55;
+}
+.badge{
+  display:inline-block;
+  padding:5px 11px;
+  border-radius:999px;
+  font-size:16px;
+  font-weight:850;
+  background:#eee;
+  margin:2px 6px 2px 0;
+}
+.good{color:var(--green)}
+.gold{color:var(--gold)}
+.note{
+  font-size:17px;
+  color:var(--muted);
+}
+.beforeafter{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:16px;
+  margin-top:18px;
+}
+.ba{
+  padding:22px;
+  border-radius:16px;
+  border:1px solid var(--line);
+}
+.ba.before{background:#fafafa}
+.ba.after{background:#fff6ec;border-color:#dfc2a2}
+.ba h3{margin-top:0}
+.kpi{
+  font-size:22px;
+  font-weight:850;
+}
+.print-tip{
+  margin-top:18px;
+  background:#eef5ff;
+  border:1px solid #c6d8ee;
+  border-radius:14px;
+  padding:18px 20px;
+  font-size:17px;
+}
+.footer{
+  text-align:center;
+  color:#666;
+  font-size:16px;
+  padding:18px 0 0;
+}
+@media(max-width:760px){
+  body{font-size:18px;line-height:1.8}
+  .wrap{padding:16px 12px 46px}
+  .hero,.section{padding:26px 20px;border-radius:16px}
+  h1{font-size:34px}
+  h2{font-size:28px}
+  h3{font-size:23px}
+  .grid,.beforeafter{grid-template-columns:1fr}
+  table{font-size:16px}
+  th,td{padding:12px 10px}
+  .key,.quote{font-size:21px}
+}
+@media print{
+  body{background:#fff;color:#000;font-size:14pt}
+  .wrap{max-width:none;padding:0}
+  .hero,.section{box-shadow:none;border:1px solid #bbb;break-inside:avoid}
+  .print-tip{display:none}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="hero">
+  <div class="eyebrow">팔도우리술보틀샵 · 네이버 플레이스 개선 제안서</div>
+  <h1>네이버 플레이스<br>「판매형」 개편안</h1>
+  <p class="meta"><strong>목표:</strong> 매장 안내 페이지 → 고객이 술을 고르고 문의·방문·구매하게 만드는 판매 페이지</p>
+  <div class="key">핵심 방향은 단순합니다.<br><strong>“술을 많이 파는 곳”보다 “술을 잘 몰라도 실패하지 않게 골라주는 곳”</strong>으로 보이게 만드는 것입니다.</div>
+</header>
+
+<section class="section">
+  <h2>1. 개편 목표</h2>
+  <div class="beforeafter">
+    <div class="ba before">
+      <h3>현재</h3>
+      <p class="big">검색 → 매장 확인 → 리뷰 확인 → 방문 여부 고민</p>
+    </div>
+    <div class="ba after">
+      <h3>개편 후</h3>
+      <p class="big">검색 → 목적에 맞는 술 발견 → 가격대 확인 → 문의 → 방문·구매 → 리뷰</p>
+    </div>
+  </div>
+  <p>핵심은 <strong>“좋은 가게”에서 “여기서 무엇을 사야 하는지 바로 알 수 있는 가게”</strong>로 바꾸는 것입니다.</p>
+</section>
+
+<section class="section">
+  <h2>2. 가장 중요한 포지셔닝</h2>
+  <p>팔도우리술의 네이버 리뷰에는 이미 강점이 충분히 쌓여 있습니다.</p>
+  <p>
+    <span class="badge">친절해요 약 235</span>
+    <span class="badge">종류가 다양해요 약 222</span>
+    <span class="badge">설명이 자세해요 약 174</span>
+    <span class="badge">추천을 잘해줘요 약 163</span>
+  </p>
+  <div class="quote">술을 잘 몰라도 괜찮습니다.<br><strong>취향·용도·예산을 말씀해 주세요. 딱 맞는 우리술을 함께 골라드립니다.</strong></div>
+  <p>보조 포지션은 <strong>“부천 상동 우리술·전통주 선물 전문점”</strong>으로 가져가는 것이 좋습니다.</p>
+</section>
+
+<section class="section">
+  <h2>3. 첫 화면부터 바꿉니다</h2>
+  <p>고객은 긴 설명을 처음부터 읽지 않습니다. 첫 화면에서 5초 안에 아래 3가지를 이해해야 합니다.</p>
+  <ul>
+    <li><strong>무엇을 파는 곳인가?</strong></li>
+    <li><strong>나에게 어떤 도움이 되는가?</strong></li>
+    <li><strong>왜 이곳에서 사야 하는가?</strong></li>
+  </ul>
+  <h3>대표사진 5장 권장 순서</h3>
+  <table>
+    <thead><tr><th>순서</th><th>사진</th><th>고객에게 전달할 메시지</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>다양한 우리술 + 깔끔한 매장</td><td><strong>전문점</strong></td></tr>
+      <tr><td>2</td><td>인기 전통주 5~7병</td><td><strong>종류가 많다</strong></td></tr>
+      <tr><td>3</td><td>고급 선물세트</td><td><strong>선물 가능</strong></td></tr>
+      <tr><td>4</td><td>사장님이 설명하는 모습</td><td><strong>추천 전문</strong></td></tr>
+      <tr><td>5</td><td>가격대별 추천상품</td><td><strong>쉽게 고를 수 있다</strong></td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section class="section">
+  <h2>4. 플레이스 소개문구 개편</h2>
+  <div class="key">
+    <strong>전통주, 어떤 술을 골라야 할지 고민되시나요?</strong><br><br>
+    팔도우리술보틀샵은 부천 상동에서 다양한 우리술을 만나볼 수 있는 전통주 전문 보틀샵입니다.<br><br>
+    막걸리·약주·과실주·증류주부터 특별한 날을 위한 우리술 선물까지 다양하게 준비하고 있습니다.<br><br>
+    술을 잘 모르셔도 괜찮습니다. <strong>드실 분의 취향, 음식, 선물 목적, 예산을 말씀해 주시면 어울리는 술을 함께 골라드립니다.</strong>
+  </div>
+  <p><strong>추천 표시 항목:</strong> 부모님·감사 선물 / 집들이·생일 선물 / 기업·단체 선물 / 홈술·모임 / 음식 페어링</p>
+</section>
+
+<section class="section">
+  <h2>5. 상품을 ‘용도별’로 보여줍니다</h2>
+  <p>제품명 중심 나열보다 고객이 바로 이해할 수 있는 <strong>가격대·용도 중심 분류</strong>가 더 판매력이 있습니다.</p>
+  <table>
+    <thead><tr><th>가격·상황</th><th>보여주는 방식</th></tr></thead>
+    <tbody>
+      <tr><td><strong>3만원 이하</strong></td><td>부담 없이 즐기는 우리술</td></tr>
+      <tr><td><strong>3~5만원</strong></td><td>집들이·감사 선물 추천</td></tr>
+      <tr><td><strong>5~10만원</strong></td><td>부모님·중요한 분 선물</td></tr>
+      <tr><td><strong>10만원 이상</strong></td><td>특별한 날·VIP 선물</td></tr>
+    </tbody>
+  </table>
+  <p>추가로 <strong>막걸리 입문자 / 와인 좋아하는 분 / 위스키 좋아하는 분 / 고기·회와 어울리는 술</strong>처럼 취향별로도 나누면 좋습니다.</p>
+</section>
+
+<section class="section">
+  <h2>6. ‘선물’을 별도 카테고리로 키웁니다</h2>
+  <p>팔도우리술의 성장 가능성이 높은 영역입니다. 네이버 플레이스 사진에도 선물 관련 사진을 충분히 축적하는 것이 좋습니다.</p>
+  <div class="grid">
+    <div class="card"><b>부모님 선물</b>5만원대·10만원대 등 예산별 제안</div>
+    <div class="card"><b>집들이 선물</b>부담 없이 주기 좋은 우리술</div>
+    <div class="card"><b>감사·거래처 선물</b>포장과 격식 강조</div>
+    <div class="card"><b>명절·기업 선물</b>단체 주문·수량 상담 가능 여부 표시</div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>7. 가격을 숨기지 않습니다</h2>
+  <p>전통주 전문점에 처음 오는 고객은 <strong>“비싸지 않을까?”</strong> 하는 부담을 가질 수 있습니다.</p>
+  <div class="key">전체 상품 가격을 다 공개하지 않아도 좋습니다.<br><strong>2만원대 / 3만원대 / 5만원대 / 10만원대~</strong> 정도만 보여줘도 방문 장벽이 크게 낮아집니다.</div>
+</section>
+
+<section class="section">
+  <h2>8. 사진을 ‘예쁜 사진’보다 ‘판매사진’으로</h2>
+  <table>
+    <thead><tr><th>사진 유형</th><th>추천 비중</th></tr></thead>
+    <tbody>
+      <tr><td>상품</td><td><strong>40%</strong></td></tr>
+      <tr><td>선물</td><td><strong>25%</strong></td></tr>
+      <tr><td>추천·상담 장면</td><td>15%</td></tr>
+      <tr><td>매장</td><td>10%</td></tr>
+      <tr><td>행사·시음</td><td>10%</td></tr>
+    </tbody>
+  </table>
+  <p>술병만 단독으로 찍기보다 <strong>술병 + 잔 + 음식</strong>, 또는 <strong>술병 + 선물포장</strong> 조합이 훨씬 좋습니다.</p>
+</section>
+
+<section class="section">
+  <h2>9. 네이버 ‘소식’을 판매 채널로 활용</h2>
+  <div class="beforeafter">
+    <div class="ba before">
+      <h3>기존 방식</h3>
+      <p>“○○양조장 신제품 입고했습니다.”</p>
+    </div>
+    <div class="ba after">
+      <h3>판매형 방식</h3>
+      <p><strong>“이번 주말 삼겹살 드신다면?”</strong><br>삼겹살과 잘 어울리는 우리술 3가지를 추천합니다.</p>
+    </div>
+  </div>
+  <p>상품 자체보다 <strong>언제, 누구와, 무엇과 마실지</strong>를 먼저 보여주는 것이 중요합니다.</p>
+</section>
+
+<section class="section">
+  <h2>10. 월 8개 콘텐츠면 충분합니다</h2>
+  <table>
+    <thead><tr><th>주차</th><th>콘텐츠 1</th><th>콘텐츠 2</th></tr></thead>
+    <tbody>
+      <tr><td>1주</td><td>이번 달 추천술</td><td>3만원대 추천</td></tr>
+      <tr><td>2주</td><td>음식궁합 추천</td><td>선물 추천</td></tr>
+      <tr><td>3주</td><td>신상품</td><td>고객이 자주 묻는 질문</td></tr>
+      <tr><td>4주</td><td>5만원대 추천</td><td>사장님 추천 BEST</td></tr>
+    </tbody>
+  </table>
+  <p>이 소재는 그대로 Instagram과 Threads에도 재활용하면 됩니다.</p>
+</section>
+
+<section class="section">
+  <h2>11. 리뷰는 ‘개수’에서 ‘내용’으로</h2>
+  <p>이미 리뷰가 충분히 쌓였기 때문에 이제는 단순히 숫자를 늘리기보다 <strong>구매 상황과 추천 경험이 담긴 리뷰</strong>가 늘어나는 것이 중요합니다.</p>
+  <p>특히 좋은 리뷰 주제는 <strong>선물 추천 / 예산 맞춤 / 음식 페어링 / 전통주 초보 / 친절한 설명 / 다양한 종류</strong>입니다.</p>
+  <div class="quote">“오늘 추천받으신 술 괜찮으셨다면 편하게 방문 경험 남겨주세요.”</div>
+</section>
+
+<section class="section">
+  <h2>12. 네이버 검색 키워드 구조</h2>
+  <div class="grid">
+    <div class="card"><b>지역 × 상품</b>부천 전통주 / 상동 전통주 / 부천 막걸리 / 부천 보틀샵</div>
+    <div class="card"><b>지역 × 구매목적</b>부천 전통주 선물 / 부천 술 선물 / 부천 집들이 선물</div>
+    <div class="card"><b>지역 × 전문성</b>부천 우리술 / 부천 전통주 추천 / 부천 전통주 전문점</div>
+    <div class="card"><b>운영 원칙</b>키워드를 억지로 반복하지 말고 사진·소식·소개글에 자연스럽게 활용</div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>13. 광고는 플레이스 개편 후</h2>
+  <p class="big">플레이스 개편 → 판매 콘텐츠 축적 → 반응 확인 → 광고</p>
+  <p>페이지가 판매형으로 정리되기 전에 광고부터 집행하면 고객을 데려와도 구매로 연결하기 어렵습니다.</p>
+  <p>초기에는 <strong>상동·중동 및 부천 생활권</strong> 중심으로 작게 테스트하고, 일반적인 ‘전통주’보다 <strong>부천 전통주 선물 / 상동 전통주 / 부천 보틀샵</strong>처럼 구매 의도가 강한 키워드를 우선 검토합니다.</p>
+</section>
+
+<section class="section">
+  <h2>14. 매월 딱 5개 숫자만 봅니다</h2>
+  <table>
+    <thead><tr><th>KPI</th><th>확인 목적</th></tr></thead>
+    <tbody>
+      <tr><td class="kpi">플레이스 조회</td><td>얼마나 발견되는가</td></tr>
+      <tr><td class="kpi">전화·문의</td><td>관심이 생겼는가</td></tr>
+      <tr><td class="kpi">길찾기</td><td>방문 의도가 있는가</td></tr>
+      <tr><td class="kpi">실제 방문·구매</td><td>매출로 연결되는가</td></tr>
+      <tr><td class="kpi">신규 리뷰</td><td>만족했는가</td></tr>
+    </tbody>
+  </table>
+  <p>가능하면 계산할 때 가볍게 <strong>“네이버 보고 오셨어요?”</strong>라고 확인하면 온라인 마케팅의 실제 효과를 판단하기 쉬워집니다.</p>
+</section>
+
+<section class="section">
+  <h2>15. 개편 전과 개편 후</h2>
+  <table>
+    <thead><tr><th>현재</th><th>개편 후</th></tr></thead>
+    <tbody>
+      <tr><td>전통주 판매점</td><td><strong>우리술 추천 전문점</strong></td></tr>
+      <tr><td>상품 소개</td><td><strong>고객 상황별 추천</strong></td></tr>
+      <tr><td>술 이름 중심</td><td><strong>용도·예산 중심</strong></td></tr>
+      <tr><td>제품 사진</td><td><strong>구매 이유가 있는 사진</strong></td></tr>
+      <tr><td>신상품 소식</td><td><strong>판매형 콘텐츠</strong></td></tr>
+      <tr><td>리뷰 개수</td><td><strong>리뷰 내용까지 자산화</strong></td></tr>
+      <tr><td>SNS와 플레이스 분리</td><td><strong>하나의 콘텐츠를 재활용</strong></td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section class="section">
+  <h2>16. 30일 실행계획</h2>
+  <div class="step"><div class="num">1</div><div><strong>1주차</strong><br>대표사진 5장 교체, 소개문구 수정, 선물·가격대별 상품 구분</div></div>
+  <div class="step"><div class="num">2</div><div><strong>2주차</strong><br>3만원·5만원·10만원 추천, 부모님·집들이·감사선물 콘텐츠 촬영</div></div>
+  <div class="step"><div class="num">3</div><div><strong>3주차</strong><br>네이버 소식 4개 등록, Instagram과 동일 소재로 운영</div></div>
+  <div class="step"><div class="num">4</div><div><strong>4주차</strong><br>조회·전화·길찾기·실제 구매를 확인하고 반응 좋은 콘텐츠를 다음 달 전면 배치</div></div>
+</section>
+
+<section class="section">
+  <h2>17. 최종 메시지</h2>
+  <div class="quote">술을 잘 몰라도 괜찮습니다.<br><strong>취향·음식·선물 목적·예산만 말씀해 주세요.<br>팔도우리술이 함께 골라드립니다.</strong></div>
+  <p><strong>부모님 선물 | 집들이 | 감사선물 | 기업선물 | 홈술 | 음식 페어링</strong></p>
+  <div class="key">네이버 플레이스의 목표는 단순한 매장 소개가 아닙니다.<br><strong>24시간 일하는 온라인 판매사원</strong>으로 만드는 것입니다.</div>
+
+  <div class="print-tip">인쇄/PDF 저장: 브라우저에서 <strong>Ctrl + P → 배경 그래픽 켜기 → PDF로 저장</strong>을 선택하면 화면의 강조색을 최대한 유지할 수 있습니다.</div>
+</section>
+
+<footer class="footer">팔도우리술보틀샵 네이버 플레이스 판매형 개편안 · 2026.08</footer>
+
+</div>
+</body>
+</html>
