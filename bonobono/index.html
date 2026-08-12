@@ -1,1 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>보노보노 커피로스터스 판교점 컨설팅 보고서</title>
+<style>
+:root{
+  --bg:#f5f2ee; --card:#ffffff; --ink:#241c18; --muted:#75695f;
+  --accent:#8a5b36; --line:#e7ddd3;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR",sans-serif;
+  background:var(--bg); color:var(--ink);
+}
+.wrap{max-width:1050px;margin:0 auto;padding:56px 22px 80px}
+.hero{
+  background:linear-gradient(135deg,#241a14,#71472c);
+  color:#fff;border-radius:24px;padding:46px 42px;margin-bottom:26px;
+}
+.hero h1{margin:0 0 10px;font-size:34px;line-height:1.25}
+.hero p{margin:0;color:#eadfd5}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.card{
+  background:var(--card);border:1px solid var(--line);border-radius:18px;
+  overflow:hidden;box-shadow:0 7px 22px rgba(40,28,20,.06)
+}
+.card img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover}
+.card .body{padding:22px}
+.card h2{margin:0 0 8px;font-size:22px}
+.card p{margin:0 0 16px;color:var(--muted);line-height:1.7}
+.btn{
+  display:inline-block;text-decoration:none;background:var(--accent);color:white;
+  padding:11px 16px;border-radius:10px;font-weight:700
+}
+.photos{margin-top:26px;background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px}
+.photos h2{margin-top:0}
+.photo-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.photo-grid img{width:100%;border-radius:14px;display:block}
+footer{text-align:center;color:var(--muted);font-size:13px;margin-top:30px}
+@media(max-width:760px){
+  .grid,.photo-grid{grid-template-columns:1fr}
+  .hero{padding:34px 26px}.hero h1{font-size:28px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <section class="hero">
+    <h1>보노보노 커피로스터스 판교점</h1>
+    <p>온라인 마케팅 컨설팅 보고서</p>
+  </section>
 
+  <div class="grid">
+    <article class="card">
+      <img src="photo1.png" alt="보노보노 커피 이미지 1">
+      <div class="body">
+        <h2>보고서 1</h2>
+        <p>온라인 채널·광고 운영 심층진단</p>
+        <a class="btn" href="report1.html">보고서 보기</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="photo2.png" alt="보노보노 커피 이미지 2">
+      <div class="body">
+        <h2>보고서 2</h2>
+        <p>네이버 플레이스 ‘판매형’ 개선 전략</p>
+        <a class="btn" href="report2.html">보고서 보기</a>
+      </div>
+    </article>
+  </div>
+
+  <section class="photos">
+    <h2>보노보노 커피 이미지</h2>
+    <div class="photo-grid">
+      <img src="photo1.png" alt="보노보노 커피 이미지 1">
+      <img src="photo2.png" alt="보노보노 커피 이미지 2">
+    </div>
+  </section>
+
+  <footer>BUONO BUONO Coffee Roasters · Pangyo</footer>
+</div>
+</body>
+</html>
