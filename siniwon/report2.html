@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>㈜시니원 네이버 블로그 검색 콘텐츠 구축 실행안</title>
+<style>
+:root{
+  --navy:#0f172a;
+  --blue:#0b57d0;
+  --blue2:#2563eb;
+  --muted:#667085;
+  --line:#e5e7eb;
+  --bg:#f5f7fb;
+  --white:#fff;
+  --green:#13795b;
+  --green-bg:#eaf8f2;
+  --orange:#b45309;
+  --orange-bg:#fff7ed;
+  --soft:#f8fafc;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",Arial,sans-serif;
+  background:var(--bg);
+  color:var(--navy);
+  line-height:1.75;
+}
+.wrap{
+  max-width:1060px;
+  margin:0 auto;
+  padding:48px 22px 80px;
+}
+.hero{
+  background:linear-gradient(135deg,#0f172a 0%,#123a72 55%,#0b57d0 100%);
+  color:#fff;
+  border-radius:28px;
+  padding:42px 38px;
+  box-shadow:0 18px 50px rgba(15,23,42,.16);
+  margin-bottom:24px;
+}
+.kicker{
+  font-size:13px;
+  font-weight:800;
+  letter-spacing:.08em;
+  color:#dbeafe;
+  margin-bottom:8px;
+}
+h1{
+  margin:0 0 14px;
+  font-size:38px;
+  line-height:1.3;
+  letter-spacing:-1.4px;
+}
+.hero p{
+  margin:6px 0;
+  color:#e5edf8;
+}
+.hero .key{
+  margin-top:22px;
+  padding:18px 20px;
+  border:1px solid rgba(255,255,255,.18);
+  background:rgba(255,255,255,.1);
+  border-radius:16px;
+  font-size:18px;
+  font-weight:800;
+}
+.section{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:22px;
+  padding:30px;
+  margin-top:20px;
+  box-shadow:0 10px 30px rgba(15,23,42,.04);
+}
+h2{
+  margin:0 0 16px;
+  font-size:25px;
+  letter-spacing:-.6px;
+}
+h3{
+  margin:24px 0 10px;
+  font-size:19px;
+  color:#1d4ed8;
+}
+p{margin:10px 0}
+.lead{font-size:18px;color:#334155}
+.quote{
+  background:#eaf2ff;
+  border-left:5px solid var(--blue);
+  border-radius:14px;
+  padding:18px 20px;
+  margin:18px 0;
+  font-weight:800;
+  color:#123a72;
+}
+.funnel{
+  background:#f5f9ff;
+  border:1px dashed #9ec5fe;
+  border-radius:16px;
+  padding:18px;
+  text-align:center;
+  font-weight:900;
+  color:#123a72;
+  line-height:2;
+}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:14px;
+}
+.card{
+  background:var(--soft);
+  border:1px solid var(--line);
+  border-radius:16px;
+  padding:18px;
+}
+.card strong{color:#1d4ed8}
+table{
+  width:100%;
+  border-collapse:collapse;
+  margin-top:14px;
+}
+th,td{
+  border:1px solid var(--line);
+  padding:12px 14px;
+  text-align:left;
+  vertical-align:top;
+}
+th{
+  background:#f8fafc;
+  font-weight:800;
+}
+ul,ol{padding-left:22px}
+li{margin:6px 0}
+.badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.badge{
+  display:inline-block;
+  padding:6px 10px;
+  border-radius:999px;
+  background:var(--green-bg);
+  color:var(--green);
+  font-size:13px;
+  font-weight:800;
+}
+.timeline{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:14px;
+}
+.month{
+  border:1px solid var(--line);
+  border-radius:16px;
+  padding:18px;
+  background:#fff;
+}
+.month .num{
+  display:inline-block;
+  background:#eaf2ff;
+  color:#1d4ed8;
+  font-weight:900;
+  padding:4px 9px;
+  border-radius:999px;
+  font-size:12px;
+}
+.kpi{
+  background:var(--orange-bg);
+  border:1px solid #fed7aa;
+  border-radius:16px;
+  padding:18px;
+}
+.small{font-size:13px;color:var(--muted)}
+.footer{
+  text-align:center;
+  color:var(--muted);
+  font-size:13px;
+  margin-top:26px;
+}
+@media(max-width:760px){
+  .wrap{padding:24px 14px 50px}
+  .hero{padding:30px 22px;border-radius:20px}
+  h1{font-size:29px}
+  .section{padding:23px 19px}
+  .grid,.timeline{grid-template-columns:1fr}
+  table{font-size:14px}
+}
+@media print{
+  body{background:#fff}
+  .wrap{max-width:none;padding:0}
+  .hero,.section{box-shadow:none}
+  .section{break-inside:avoid}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<section class="hero">
+  <div class="kicker">NAVER BLOG B2B SEARCH STRATEGY</div>
+  <h1>㈜시니원 네이버 블로그 검색 콘텐츠 구축 실행안</h1>
+  <p><strong>목적:</strong> 네이버 검색을 통해 소스·OEM·ODM 수요기업을 발견하고 상담·샘플·거래로 전환</p>
+  <p><strong>핵심 방향:</strong> 기업홍보형 블로그가 아니라 B2B 영업형 검색 콘텐츠 구축</p>
+  <div class="key">
+    검색 → 정보 → 신뢰 → 제조역량 확인 → 상담 → 샘플 → 거래
+  </div>
+</section>
+
+<section class="section">
+  <h2>1. 블로그의 목표부터 다르게 설정</h2>
+  <p class="lead">시니원의 블로그 KPI를 ‘이웃 수’나 ‘좋아요’ 중심으로 잡는 것은 적절하지 않습니다.</p>
+  <div class="quote">목표는 “소스·OEM 업체를 찾는 기업 고객이 네이버에서 검색했을 때 시니원을 발견하게 만드는 것”입니다.</div>
+  <div class="funnel">
+    네이버 검색 → 시니원 블로그 글 발견 → 제조 전문성 확인 → 제품·생산능력 확인 → 홈페이지/OEM 상담 → 샘플 요청 → 거래처 전환
+  </div>
+</section>
+
+<section class="section">
+  <h2>2. 핵심 타깃 고객</h2>
+  <table>
+    <tr><th>핵심 고객</th><th>검색 가능성이 높은 내용</th></tr>
+    <tr><td>외식업체 대표</td><td>업소용 소스 제조, 맞춤소스</td></tr>
+    <tr><td>프랜차이즈 본사</td><td>프랜차이즈 소스 OEM</td></tr>
+    <tr><td>식품 브랜드</td><td>소스 OEM·ODM</td></tr>
+    <tr><td>밀키트 업체</td><td>밀키트 소스 OEM</td></tr>
+    <tr><td>식품 유통사</td><td>소스 제조업체</td></tr>
+    <tr><td>신규 외식 브랜드</td><td>메뉴 소스 개발</td></tr>
+    <tr><td>구매·상품개발 담당자</td><td>HACCP 소스 제조업체</td></tr>
+  </table>
+  <p><strong>핵심:</strong> 검색량 자체보다 “실제 제조업체를 찾고 있는 사람”의 검색어를 우선 공략합니다.</p>
+</section>
+
+<section class="section">
+  <h2>3. 검색 키워드 4개 축</h2>
+  <div class="grid">
+    <div class="card">
+      <strong>A. 핵심 구매 키워드</strong>
+      <p>소스 OEM, 소스 ODM, 소스 제조업체, 업소용 소스 제조, 양념소스 제조, 식품 OEM 업체, HACCP 소스 제조업체</p>
+    </div>
+    <div class="card">
+      <strong>B. 제품별 키워드</strong>
+      <p>쭈꾸미볶음 소스 제조, 아귀찜 소스, 코다리찜 소스, 매운탕 소스, 샤브육수, 무침양념, 데리야끼소스, 업소용 육수, 간장소스</p>
+    </div>
+    <div class="card">
+      <strong>C. 고객 문제 해결형 키워드</strong>
+      <p>식당 맛을 일정하게 유지하는 방법, 프랜차이즈 소스 표준화, 주방 인건비 줄이는 소스, 매장마다 음식 맛이 다른 이유</p>
+    </div>
+    <div class="card">
+      <strong>D. OEM 정보형 키워드</strong>
+      <p>소스 OEM이란, OEM과 ODM 차이, 소스 OEM MOQ, 소스 개발 과정, OEM 소스 샘플 제작, 제조업체 선정방법</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>4. 블로그 카테고리 구성</h2>
+  <table>
+    <tr><th>카테고리</th><th>주요 내용</th><th>역할</th></tr>
+    <tr><td>① 소스 OEM·ODM</td><td>OEM·ODM 과정, MOQ, 샘플, 개발방법</td><td>검색 유입</td></tr>
+    <tr><td>② 시니원 소스 연구소</td><td>제품, 레시피, 소스 전문성</td><td>전문성 강화</td></tr>
+    <tr><td>③ 외식업 맛 표준화</td><td>식당·프랜차이즈의 문제 해결 콘텐츠</td><td>고객 문제 공략</td></tr>
+    <tr><td>④ HACCP & 제조현장</td><td>공장, 생산설비, 위생관리, 포장</td><td>신뢰 확보</td></tr>
+    <tr><td>⑤ 시니원 이야기</td><td>회사소개, 신제품, 직원, 전시회, 기업소식</td><td>기업 신뢰</td></tr>
+  </table>
+</section>
+
+<section class="section">
+  <h2>5. 첫 20개 글 추천 주제</h2>
+  <table>
+    <tr><th>순서</th><th>블로그 제목 예시</th><th>핵심 키워드</th></tr>
+    <tr><td>1</td><td>소스 OEM이란? 처음 제조를 맡길 때 알아야 할 7가지</td><td>소스 OEM</td></tr>
+    <tr><td>2</td><td>소스 OEM과 ODM, 어떤 방식이 우리 브랜드에 맞을까?</td><td>소스 ODM</td></tr>
+    <tr><td>3</td><td>업소용 소스 제조업체 선정 전 꼭 확인할 5가지</td><td>소스 제조업체</td></tr>
+    <tr><td>4</td><td>HACCP 소스 제조업체를 선택해야 하는 이유</td><td>HACCP 소스</td></tr>
+    <tr><td>5</td><td>프랜차이즈 음식 맛을 매장마다 일정하게 만드는 방법</td><td>프랜차이즈 소스</td></tr>
+    <tr><td>6</td><td>식당의 맛 표준화, 왜 소스가 중요한가?</td><td>업소용 소스</td></tr>
+    <tr><td>7</td><td>소스 OEM 최소 생산수량 MOQ는 어떻게 결정될까?</td><td>소스 OEM MOQ</td></tr>
+    <tr><td>8</td><td>아이디어가 실제 소스 제품이 되기까지</td><td>소스 개발</td></tr>
+    <tr><td>9</td><td>소스 OEM 샘플 개발은 어떻게 진행될까?</td><td>소스 샘플</td></tr>
+    <tr><td>10</td><td>밀키트 사업자가 소스 제조업체를 선택할 때 체크할 것</td><td>밀키트 소스 OEM</td></tr>
+    <tr><td>11</td><td>쭈꾸미볶음 맛의 핵심, 업소용 양념소스</td><td>쭈꾸미 소스</td></tr>
+    <tr><td>12</td><td>아귀찜 전문점의 맛을 표준화하는 방법</td><td>아귀찜 소스</td></tr>
+    <tr><td>13</td><td>샤브샤브 육수 OEM, 무엇을 확인해야 할까?</td><td>샤브육수 OEM</td></tr>
+    <tr><td>14</td><td>탕·찌개 전문점에서 베이스소스를 사용하는 이유</td><td>탕소스</td></tr>
+    <tr><td>15</td><td>배달전문점 메뉴 품질을 일정하게 유지하는 방법</td><td>업소용 소스</td></tr>
+    <tr><td>16</td><td>외식업체가 맞춤소스를 개발하면 좋은 5가지 이유</td><td>맞춤소스</td></tr>
+    <tr><td>17</td><td>소스 제조공장에서 HACCP은 어떻게 관리될까?</td><td>HACCP 제조</td></tr>
+    <tr><td>18</td><td>시니원은 어떤 소스를 만들고 있나요?</td><td>시니원</td></tr>
+    <tr><td>19</td><td>성남 소스 제조기업 시니원의 생산 이야기</td><td>성남 소스 제조</td></tr>
+    <tr><td>20</td><td>우리 브랜드만의 소스를 만들고 싶다면 어디서 시작할까?</td><td>맞춤 소스 OEM</td></tr>
+  </table>
+  <div class="quote">회사 홍보글부터 시작하지 말고, 고객이 실제 검색하는 질문에 답하는 콘텐츠를 먼저 충분히 축적하는 것이 중요합니다.</div>
+</section>
+
+<section class="section">
+  <h2>6. 글 하나의 표준 구조</h2>
+  <ol>
+    <li><strong>제목</strong> — 검색어 + 고객 고민</li>
+    <li><strong>도입</strong> — 고객의 실제 문제 제시</li>
+    <li><strong>전문정보</strong> — OEM 과정, MOQ, 생산, HACCP 등 설명</li>
+    <li><strong>시니원의 역량</strong> — 실제 제조·제품·경험 연결</li>
+    <li><strong>직접 촬영 사진</strong> — 제품, 원료, 생산설비, 포장, 완제품</li>
+    <li><strong>CTA</strong> — 상담·샘플·견적 문의로 유도</li>
+  </ol>
+  <h3>CTA 예시</h3>
+  <div class="quote">
+    “우리 매장에 맞는 소스를 개발할 수 있을까요?”<br>
+    제품 종류와 원하는 맛, 예상 생산수량을 알려주시면 상담을 통해 제조 가능 여부를 검토해 드립니다.
+  </div>
+</section>
+
+<section class="section">
+  <h2>7. 공장 사진 활용 전략</h2>
+  <p>시니원은 B2B 제조기업이므로 예쁜 제품사진뿐 아니라 <strong>실제 제조현장 사진</strong>이 매우 중요합니다.</p>
+  <div class="funnel">
+    공장 외관 → HACCP 표시 → 원료 → 배합 → 제조설비 → 충진 → 포장 → 완제품 → 직원 작업 모습
+  </div>
+  <p>한 번 제대로 촬영해 두면 블로그, 홈페이지, 회사소개서, 영업자료에 반복 활용할 수 있습니다.</p>
+</section>
+
+<section class="section">
+  <h2>8. 3개월 운영계획</h2>
+  <div class="timeline">
+    <div class="month">
+      <span class="num">1개월 차</span>
+      <h3>기반 구축</h3>
+      <ul>
+        <li>블로그 디자인·카테고리 정비</li>
+        <li>핵심 키워드 30개 선정</li>
+        <li>OEM·ODM 기본 콘텐츠 주 2회 발행</li>
+        <li>누적 약 8개 콘텐츠 확보</li>
+      </ul>
+    </div>
+    <div class="month">
+      <span class="num">2개월 차</span>
+      <h3>전문성 구축</h3>
+      <ul>
+        <li>제품별 콘텐츠 발행</li>
+        <li>HACCP·제조현장 콘텐츠 강화</li>
+        <li>실제 공장사진 적극 활용</li>
+        <li>누적 약 16개 콘텐츠 확보</li>
+      </ul>
+    </div>
+    <div class="month">
+      <span class="num">3개월 차</span>
+      <h3>영업전환 강화</h3>
+      <ul>
+        <li>프랜차이즈·외식업 문제 해결형 글</li>
+        <li>OEM 상담형 콘텐츠 확대</li>
+        <li>홈페이지 상담페이지 연결</li>
+        <li>누적 24개 이상 구축</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>9. 성과지표(KPI)</h2>
+  <div class="kpi">
+    <p><strong>조회수보다 중요한 것은 ‘구매 의도가 있는 유입’입니다.</strong></p>
+    <p>“소스 OEM” 검색으로 유입된 외식기업 대표 10명이 일반 방문자 수천 명보다 더 높은 가치를 가질 수 있습니다.</p>
+  </div>
+  <div class="funnel" style="margin-top:16px">
+    네이버 검색 유입 키워드 수 → 핵심 키워드 노출 순위 → 홈페이지 이동 → OEM 문의 → 샘플 요청 → 실제 상담 → 신규 거래처
+  </div>
+</section>
+
+<section class="section">
+  <h2>10. 최종 컨설팅 제안</h2>
+  <p>시니원의 블로그 전략은 “우리가 이런 회사입니다”를 반복하는 기업 홍보형 블로그에서 벗어나는 것이 핵심입니다.</p>
+  <div class="quote">
+    고객이 검색하는 질문에 시니원이 전문가로 답한다.
+  </div>
+  <p>블로그는 잠재 고객을 홈페이지와 상담창구로 연결하는 검색 영업사원 역할을 해야 합니다.</p>
+  <div class="funnel">
+    검색 → 정보 → 신뢰 → 제조역량 확인 → 상담 → 샘플 → 거래
+  </div>
+  <p><strong>B2B 홈페이지가 ‘본사 영업점’이라면, 네이버 블로그는 잠재 고객을 그 영업점으로 데려오는 ‘검색 영업사원’입니다.</strong></p>
+</section>
+
+<div class="footer">
+  ㈜시니원 네이버 블로그 검색 콘텐츠 구축 실행안
+</div>
+
+</div>
+</body>
+</html>
