@@ -3,76 +3,47 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>꼬모도블루 컨설팅 보고서</title>
+<title>꼬모도블루 | 단체주문 & 컨설팅 보고서</title>
 <style>
-:root{--blue:#0B57D0;--navy:#102A43;--sky:#EEF5FF;--text:#17202A;--muted:#667085;--line:#E6EAF0;--bg:#F5F7FA;--green:#0F9D58;--orange:#F59E0B;--red:#D92D20}
-*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Apple SD Gothic Neo","Noto Sans KR",Arial,sans-serif;line-height:1.65}
-.top{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
-.topin{max-width:1120px;margin:auto;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px}
-.home{text-decoration:none;color:var(--navy);font-weight:850} .tabs{display:flex;gap:8px}
-.tab{border:0;background:#edf2f7;color:#475467;padding:9px 13px;border-radius:999px;font-weight:800;cursor:pointer}
-.tab.active{background:var(--blue);color:#fff}
-.report{display:none} .report.active{display:block}
-.page{width:min(1120px,calc(100% - 28px));margin:26px auto;background:#fff;border-radius:24px;box-shadow:0 12px 38px rgba(16,42,67,.08);overflow:hidden}
-.header{padding:52px 54px 34px;background:linear-gradient(135deg,#fff 0%,#F3F7FF 100%);border-bottom:1px solid var(--line)}
-.kicker{font-size:14px;font-weight:800;color:var(--blue);letter-spacing:.04em;margin-bottom:8px}
-h1{font-size:38px;line-height:1.2;margin:0 0 12px;letter-spacing:-1.4px} .subtitle{font-size:17px;color:var(--muted);max-width:850px}
-.content{padding:36px 54px 54px} .section{margin:0 0 42px}
-.stitle{display:flex;gap:10px;align-items:center;font-size:24px;font-weight:850;margin-bottom:18px}
-.num{width:34px;height:34px;background:var(--blue);color:#fff;border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:16px}
-.hero{background:linear-gradient(135deg,#0B57D0,#174EA6);color:#fff;border-radius:20px;padding:26px 28px;margin-bottom:34px}
-.hero h2{font-size:25px;margin:0 0 8px} .hero p{margin:0;font-size:17px}
-.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:16px} .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.card{border:1px solid var(--line);border-radius:18px;padding:21px;background:#fff} .card h3{font-size:19px;color:var(--navy);margin:0 0 10px}
-.card p{margin:0} .card ul{margin:6px 0 0;padding-left:20px} .metric{font-size:29px;font-weight:850;color:var(--blue)}
-.badge{display:inline-block;padding:6px 11px;border-radius:999px;background:var(--sky);color:var(--blue);font-size:13px;font-weight:800}
-.note{background:#F8FAFC;border-left:4px solid var(--blue);padding:16px 18px;border-radius:12px}
-.bar-row{display:grid;grid-template-columns:165px 1fr 44px;gap:12px;align-items:center;margin:12px 0} .bar{height:14px;background:#E8EEF8;border-radius:99px;overflow:hidden}
-.fill{height:100%;background:linear-gradient(90deg,#174EA6,#0B57D0);border-radius:99px} .flow{margin-top:18px;padding:14px;background:var(--sky);color:var(--blue);border-radius:12px;font-weight:800;text-align:center}
-table{width:100%;border-collapse:collapse;font-size:15px} th,td{border-bottom:1px solid var(--line);padding:13px 12px;text-align:left;vertical-align:top} th{background:#F8FAFC;color:var(--navy)}
-.tags{display:flex;gap:10px;flex-wrap:wrap} .tag{padding:10px 14px;border:1px solid #C9D9F5;background:#F3F7FF;border-radius:999px;color:#174EA6;font-weight:800}
-.swot{display:grid;grid-template-columns:repeat(2,1fr);gap:16px} .swot .card:nth-child(1){border-top:5px solid var(--green)} .swot .card:nth-child(2){border-top:5px solid var(--orange)} .swot .card:nth-child(3){border-top:5px solid var(--blue)} .swot .card:nth-child(4){border-top:5px solid var(--red)}
-.timeline{display:grid;grid-template-columns:repeat(3,1fr);gap:16px} .month{border:1px solid var(--line);border-radius:18px;padding:20px} .month strong{color:var(--blue);font-size:18px}
-.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:16px} .kpis div{padding:15px;border-radius:13px;background:#F8FAFC;border:1px solid var(--line);text-align:center;font-weight:800}
-.footer{background:#0F172A;color:#fff;padding:27px 54px} .footer .small{font-size:13px;color:#CBD5E1;margin-bottom:5px} .footer strong{font-size:21px;line-height:1.5}
-@media(max-width:760px){.topin{align-items:flex-start;flex-direction:column}.page{width:100%;margin:0;border-radius:0}.header,.content,.footer{padding-left:20px;padding-right:20px}.header{padding-top:34px}h1{font-size:29px}.grid2,.grid3,.swot,.timeline,.kpis{grid-template-columns:1fr}.bar-row{grid-template-columns:120px 1fr 36px;font-size:13px}table{display:block;overflow-x:auto;white-space:nowrap}}
+:root{--green:#49642f;--green2:#718c4b;--cream:#faf7ef;--ink:#24301f;--muted:#66705f;--line:#e6e5dc}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Apple SD Gothic Neo","Noto Sans KR",Arial,sans-serif;background:var(--cream);color:var(--ink)}
+.wrap{max-width:1040px;margin:auto;padding:42px 20px 64px}
+.hero{background:#fff;border-radius:24px;overflow:hidden;box-shadow:0 12px 36px rgba(35,48,31,.10)}
+.hero img{display:block;width:100%;height:auto}
+.info{padding:30px}.kicker{font-size:14px;font-weight:800;color:var(--green2);letter-spacing:.08em}
+h1{font-size:34px;margin:8px 0 10px}p{font-size:18px;line-height:1.7;color:var(--muted);margin:0}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+.btn{display:inline-block;text-decoration:none;background:var(--green);color:#fff;padding:14px 20px;border-radius:12px;font-weight:800}
+.btn.secondary{background:#fff;color:var(--green);border:1px solid var(--green)}
+.reports{margin-top:30px;background:#fff;border-radius:20px;padding:28px}.reports h2{margin:0 0 18px;font-size:25px}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.card{display:block;text-decoration:none;color:var(--ink);border:1px solid var(--line);border-radius:16px;padding:20px;min-height:125px}
+.card strong{display:block;font-size:18px;margin-bottom:8px}.card span{color:var(--muted);line-height:1.5}
+@media(max-width:720px){.wrap{padding:18px 12px 40px}.info{padding:22px}h1{font-size:27px}.grid{grid-template-columns:1fr}p{font-size:16px}}
 </style>
 </head>
 <body>
-<nav class="top">
- <div class="topin">
-   <a class="home" href="../">← 전체 보고서</a>
-   <div class="tabs">
-     <button class="tab active" data-target="r1">① 현황 분석</button>
-     <button class="tab" data-target="r2">② 경쟁분석·3개월 실행안</button>
-   </div>
- </div>
-</nav>
-
-<section id="r1" class="report active"><main class="page"><header class="header"><div class="kicker">ONLINE MARKETING DIAGNOSIS</div><h1>꼬모도블루 온라인 마케팅 현황 분석 보고서</h1><div class="subtitle">신내역·중랑구 | 온라인 채널, 콘텐츠, 검색노출, 광고·협찬 활동, 고객 유입구조를 종합한 컨설팅 진단</div></header><section class="content"><div class="hero"><h2>핵심 진단</h2><p>꼬모도블루는 이미 <b>네이버 검색 + 블로그/체험단 + 인스타그램 + 단체주문 콘텐츠</b>의 기반이 있습니다. 앞으로의 과제는 노출량 확대보다 <b>실제 주문으로 연결되는 구조</b>를 만드는 것입니다.</p></div>
-<section class="section"><div class="stitle"><span class="num">1</span>현재 온라인 마케팅 구조</div><div class="grid3"><div class="card"><span class="badge">검색</span><h3>네이버 플레이스</h3><p>신내역·신내동 지역 검색에서 핵심 노출 채널 역할을 하고 있습니다.</p></div><div class="card"><span class="badge">확산</span><h3>블로그·체험단</h3><p>방문후기와 협찬형 콘텐츠가 다수 축적돼 검색 노출을 보조합니다.</p></div><div class="card"><span class="badge">관계</span><h3>인스타그램</h3><p>사장님 직접 운영형 콘텐츠로 메뉴·일상·단체주문 사례를 전달합니다.</p></div></div><div class="flow">네이버 검색 → 블로그/체험후기 → 네이버 플레이스 확인 → 방문/문의</div></section>
-<section class="section"><div class="stitle"><span class="num">2</span>채널별 운영 수준</div><div class="card"><div class="bar-row"><span>네이버 플레이스</span><div class="bar"><div class="fill" style="width:90%"></div></div><b>4.5</b></div><div class="bar-row"><span>블로그/체험단</span><div class="bar"><div class="fill" style="width:100%"></div></div><b>5.0</b></div><div class="bar-row"><span>인스타그램</span><div class="bar"><div class="fill" style="width:80%"></div></div><b>4.0</b></div><div class="bar-row"><span>릴스</span><div class="bar"><div class="fill" style="width:60%"></div></div><b>3.0</b></div><div class="bar-row"><span>단체주문 마케팅</span><div class="bar"><div class="fill" style="width:80%"></div></div><b>4.0</b></div><div class="bar-row"><span>재방문/CRM</span><div class="bar"><div class="fill" style="width:20%"></div></div><b>1.0</b></div></div></section>
-<section class="section"><div class="stitle"><span class="num">3</span>현재 강점과 한계</div><div class="grid2"><div class="card"><h3>잘하고 있는 점</h3><ul><li>네이버 지역검색 기반 확보</li><li>블로그·체험단 콘텐츠 축적</li><li>인스타그램 직접 운영</li><li>직접 만든 치아바타·샌드위치 비주얼 경쟁력</li><li>기관·학원 등 단체주문 사례 존재</li></ul></div><div class="card"><h3>아쉬운 점</h3><ul><li>브런치·파스타·베이커리·카페 등 메시지 분산</li><li>단체주문 상품·가격·최소수량 정보 부족</li><li>유료광고 성과 측정 체계 미흡</li><li>재방문 고객 관리 구조 부족</li><li>콘텐츠가 ‘맛집 소개’에 치우침</li></ul></div></div></section>
-<section class="section"><div class="stitle"><span class="num">4</span>광고·협찬 활동 판단</div><table><thead><tr><th>항목</th><th>현재 판단</th><th>컨설팅 코멘트</th></tr></thead><tbody><tr><td>블로그 체험단</td><td>활성</td><td>검색 노출에는 효과적이나 지속 의존은 비효율 가능</td></tr><tr><td>인스타 협찬</td><td>활성 흔적 확인</td><td>지역 인플루언서 중심으로 질 관리 필요</td></tr><tr><td>네이버 검색광고</td><td>외부에서 확인 어려움</td><td>관리자 데이터 확인 필요</td></tr><tr><td>Meta 광고</td><td>외부에서 확인 어려움</td><td>전환 페이지 구축 후 소액 테스트 권장</td></tr><tr><td>CRM/재방문</td><td>약함</td><td>카카오채널·네이버톡톡·재주문 관리 필요</td></tr></tbody></table></section>
-<section class="section"><div class="stitle"><span class="num">5</span>네이버플레이스 추천 대표키워드 5</div><div class="tags"><span class="tag">신내역 샌드위치</span><span class="tag">신내역 브런치</span><span class="tag">중랑구 샌드위치</span><span class="tag">중랑구 단체주문</span><span class="tag">중랑구 회의간식</span></div><div class="note" style="margin-top:16px"><b>핵심 원칙:</b> “맛집”처럼 넓은 단어보다 <b>지역 + 메뉴 + 사용목적</b> 키워드를 우선해 실제 주문 가능성을 높입니다.</div></section></section><footer class="footer"><div class="small">FINAL RECOMMENDATION</div><strong>꼬모도블루의 다음 단계는 “온라인에서 많이 보이는 가게”가 아니라 “검색하면 바로 주문할 수 있는 가게”로 전환하는 것입니다.</strong></footer></main></section>
-<section id="r2" class="report"><main class="page"><header class="header"><div class="kicker">COMPETITIVE STRATEGY & 90-DAY PLAN</div><h1>꼬모도블루 경쟁분석 및 3개월 온라인 마케팅 실행안</h1><div class="subtitle">브런치·샌드위치·단체주문 경쟁구도 분석을 바탕으로, 3개월 안에 검색노출을 실제 매출로 연결하기 위한 실행전략</div></header><section class="content"><div class="hero"><h2>전략 방향</h2><p>꼬모도블루는 ‘신내역 브런치카페’ 경쟁에만 머무르기보다 <b>중랑·노원 기업·기관 단체 샌드위치 전문점</b>으로 영역을 확장하는 것이 가장 유리합니다.</p></div>
-<section class="section"><div class="stitle"><span class="num">1</span>경쟁구도</div><table><thead><tr><th>경쟁 영역</th><th>주요 경쟁자</th><th>상대 강점</th><th>꼬모도블루 전략</th></tr></thead><tbody><tr><td>브런치</td><td>22번가</td><td>가성비·지역 리뷰</td><td>가격보다 품질·치아바타·신선함 강조</td></tr><tr><td>파스타</td><td>데번140</td><td>식사메뉴·배달·검색노출</td><td>정면승부보다 샌드위치 중심 차별화</td></tr><tr><td>공간형 카페</td><td>카페브릭</td><td>넓은 공간·주차·분위기</td><td>공간보다 ‘좋은 한 끼’와 음식품질 강조</td></tr><tr><td>단체주문</td><td>에브리 샌드위치 등</td><td>주문 편의·구성·납품사례</td><td>B2B 주문정보와 실제 사례 강화</td></tr></tbody></table><div class="note" style="margin-top:16px"><b>가장 유리한 포지션:</b> 신내역 브런치 + 중랑·노원 기업·기관 단체 샌드위치 전문</div></section>
-<section class="section"><div class="stitle"><span class="num">2</span>SWOT</div><div class="swot"><div class="card"><h3>S · Strength</h3><ul><li>직접 만든 치아바타·베이커리</li><li>푸짐한 샌드위치 비주얼</li><li>단체주문 경험</li><li>사장님 스토리와 친근함</li></ul></div><div class="card"><h3>W · Weakness</h3><ul><li>브랜드 메시지 분산</li><li>단체주문 상품화 미흡</li><li>가격·최소수량·배송정보 부족</li><li>재구매 관리체계 부족</li></ul></div><div class="card"><h3>O · Opportunity</h3><ul><li>지식산업센터 기업고객</li><li>관공서·학교·학원·병원</li><li>회의·교육·워크숍 간식</li><li>20~100인 반복 주문시장</li></ul></div><div class="card"><h3>T · Threat</h3><ul><li>단체도시락 전문업체</li><li>가성비 브런치 경쟁</li><li>검색키워드 선점 경쟁</li><li>체험단 효율 저하 가능성</li></ul></div></div></section>
-<section class="section"><div class="stitle"><span class="num">3</span>권장 포지셔닝</div><div class="grid2"><div class="card"><h3>기존 인식</h3><p class="metric">브런치카페</p><p>파스타·샐러드·샌드위치·베이커리를 함께 판매하는 신내역 브런치 공간</p></div><div class="card"><h3>권장 인식</h3><p class="metric">단체 샌드위치 전문</p><p>매일 직접 만든 치아바타로 기업·기관·학원·병원 회의간식을 준비하는 지역 전문점</p></div></div></section>
-<section class="section"><div class="stitle"><span class="num">4</span>단체주문 상품 구조 제안</div><table><thead><tr><th>상품</th><th>예시 구성</th><th>목표 가격대</th><th>용도</th></tr></thead><tbody><tr><td>LIGHT</td><td>반 샌드위치 + 음료</td><td>6,900~7,900원</td><td>교육·가벼운 간식</td></tr><tr><td>STANDARD</td><td>샌드위치 + 과일/쿠키 + 음료</td><td>9,900~11,900원</td><td>회의·워크숍</td></tr><tr><td>PREMIUM</td><td>시그니처 치아바타 + 과일 + 디저트 + 음료</td><td>13,900~15,900원</td><td>행사·VIP·기업선물</td></tr></tbody></table><div class="note" style="margin-top:16px">※ 가격은 전략 제안용 예시입니다. 실제 원가·포장비·배송비를 확인해 최종 확정합니다.</div></section>
-<section class="section"><div class="stitle"><span class="num">5</span>3개월 실행 로드맵</div><div class="timeline"><div class="month"><strong>1개월차 | 기반 정리</strong><ul><li>네이버 플레이스 소개문 수정</li><li>대표키워드 5개 적용</li><li>단체주문 상품 3종 확정</li><li>최소수량·배송지역·주문방법 정리</li></ul></div><div class="month"><strong>2개월차 | 검색 점유</strong><ul><li>주 2회 주문형 콘텐츠</li><li>회사간식·회의간식 키워드 집중</li><li>실제 납품사례 축적</li><li>네이버·인스타 연동</li></ul></div><div class="month"><strong>3개월차 | 매출 연결</strong><ul><li>QR 기반 문의 동선 구축</li><li>주변 기업·기관·학원 공략</li><li>재주문 고객 관리 시작</li><li>성과 확인 후 소액 광고 테스트</li></ul></div></div></section>
-<section class="section"><div class="stitle"><span class="num">6</span>측정 KPI</div><div class="kpis"><div>단체주문 문의 수</div><div>실제 주문 수</div><div>평균 주문금액</div><div>재주문 고객 수</div></div><div class="note" style="margin-top:16px">주문 시 “어떻게 알고 연락주셨어요?”를 확인해 <b>네이버 / 인스타 / 소개 / 재주문</b>으로 기록합니다.</div></section>
-<section class="section"><div class="stitle"><span class="num">7</span>실행 우선순위</div><div class="flow">상품 정리 → 검색 콘텐츠 → 문의 페이지 → 유입 측정 → 소액 광고 → 재주문 관리</div></section></section><footer class="footer"><div class="small">FINAL RECOMMENDATION</div><strong>“맛집 노출”을 더 늘리는 것보다, 이미 잘하고 있는 샌드위치와 단체주문 경험을 ‘주문하기 쉬운 상품’으로 만드는 것이 3개월 내 가장 현실적인 성장전략입니다.</strong></footer></main></section>
-
-<script>
-const tabs=document.querySelectorAll('.tab');
-tabs.forEach(t=>t.addEventListener('click',()=>{
-  tabs.forEach(x=>x.classList.remove('active'));
-  document.querySelectorAll('.report').forEach(x=>x.classList.remove('active'));
-  t.classList.add('active');
-  document.getElementById(t.dataset.target).classList.add('active');
-  window.scrollTo({top:0,behavior:'smooth'});
-}));
-</script>
+<main class="wrap">
+<section class="hero">
+<img src="images/comodo-group-order.png" alt="꼬모도블루 샌드위치 단체주문 안내 포스터">
+<div class="info">
+<div class="kicker">COMODO BLUE · GROUP ORDER</div>
+<h1>꼬모도블루 단체주문 안내</h1>
+<p>회의·행사·모임에 간편하고 든든한 샌드위치를 준비합니다. 신선한 재료, 푸짐한 구성, 깔끔한 포장으로 맞춤 수량과 시간에 맞춰 준비합니다.</p>
+<div class="actions">
+<a class="btn" href="tel:0269532030">단체주문 문의 02-6953-2030</a>
+<a class="btn secondary" href="#reports">컨설팅 보고서 보기</a>
+</div>
+</div>
+</section>
+<section class="reports" id="reports">
+<h2>꼬모도블루 컨설팅 보고서</h2>
+<div class="grid">
+<a class="card" href="report1.html"><strong>01. 온라인마케팅 현황 분석 보고서</strong><span>현재 온라인 채널과 마케팅 운영 현황을 진단합니다.</span></a>
+<a class="card" href="report2.html"><strong>02. 경쟁분석 기반 컨설팅 보고서</strong><span>경쟁환경과 차별화 방향, 실행 전략을 정리합니다.</span></a>
+</div>
+</section>
+</main>
 </body>
 </html>
