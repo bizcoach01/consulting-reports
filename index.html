@@ -13,9 +13,7 @@
   --bg:#f6f8fb;
   --white:#ffffff;
 }
-*{
-  box-sizing:border-box;
-}
+*{box-sizing:border-box}
 body{
   margin:0;
   font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Apple SD Gothic Neo","Noto Sans KR",Arial,sans-serif;
@@ -78,11 +76,15 @@ h1{
   font-weight:800;
   margin-bottom:18px;
 }
+.badge.new{
+  background:#ecfdf3;
+  color:#027a48;
+}
 .card h2{
   font-size:22px;
   line-height:1.35;
   margin:0 0 10px;
-  letter-spacing:-0.4px;
+  letter-spacing:-.4px;
 }
 .card p{
   color:var(--muted);
@@ -98,21 +100,11 @@ h1{
   font-size:13px;
 }
 @media(max-width:720px){
-  .wrap{
-    padding:38px 18px;
-  }
-  h1{
-    font-size:32px;
-  }
-  .lead{
-    font-size:16px;
-  }
-  .grid{
-    grid-template-columns:1fr;
-  }
-  .card{
-    min-height:auto;
-  }
+  .wrap{padding:38px 18px}
+  h1{font-size:32px}
+  .lead{font-size:16px}
+  .grid{grid-template-columns:1fr}
+  .card{min-height:auto}
 }
 </style>
 </head>
@@ -124,7 +116,7 @@ h1{
   <h1>소상공인 컨설팅 보고서</h1>
 
   <p class="lead">
-    온라인 마케팅 현황, 경쟁 분석, 실행 전략을 매장별로 정리한 컨설팅 결과물입니다.
+    온라인 마케팅 현황, 경쟁 분석, 실행 전략을 매장·기업별로 정리한 컨설팅 결과물입니다.
   </p>
 
   <section class="grid">
@@ -148,21 +140,27 @@ h1{
     </a>
 
     <a class="card" href="./pal/">
-      <span class="badge">NEW</span>
+      <span class="badge">REPORT</span>
       <h2>팔도우리술 보틀샵</h2>
       <p>온라인 마케팅 현황, 경쟁분석 및 네이버플레이스 판매형 개편 컨설팅</p>
     </a>
 
     <a class="card" href="./purpapa/">
-      <span class="badge">NEW</span>
+      <span class="badge">REPORT</span>
       <h2>푸르파파 위례호수공원점</h2>
-      <p>온라인 마케팅 현황·경쟁전략 및 네이버플레이스 판매형 개선 실행안</p>
+      <p>온라인 마케팅 현황 진단과 고객 유입·매출 개선 실행전략</p>
     </a>
 
     <a class="card" href="./bonobono/">
-      <span class="badge">NEW</span>
-      <h2>보노보노 커피로스터스 판교점</h2>
-      <p>온라인 채널·광고 운영 심층진단 및 네이버플레이스 ‘판매형’ 개선 전략</p>
+      <span class="badge">REPORT</span>
+      <h2>보노보노 커피 판교점</h2>
+      <p>온라인 채널·광고 운영 심층진단 및 네이버플레이스 개선전략</p>
+    </a>
+
+    <a class="card" href="./erez/">
+      <span class="badge new">NEW</span>
+      <h2>에레즈코퍼레이션</h2>
+      <p>온라인 마케팅 현황 심층분석 및 과테말라 전문성을 기반으로 한 핵심 통합전략</p>
     </a>
 
   </section>
