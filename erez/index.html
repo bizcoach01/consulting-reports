@@ -1,1 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>에레즈코퍼레이션 온라인 마케팅 보고서</title>
+<style>
+:root{--green:#0f4d36;--green2:#176345;--gold:#d9b65d;--bg:#f4f6f2;--text:#17211b;--muted:#647067;--line:#dfe5df;--white:#fff}
+*{box-sizing:border-box} body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Apple SD Gothic Neo","Noto Sans KR",Arial,sans-serif;background:var(--bg);color:var(--text)}
+.wrap{max-width:1080px;margin:0 auto;padding:52px 22px 80px}.hero{background:linear-gradient(135deg,var(--green),#082f23);color:white;padding:46px 38px;border-radius:28px;box-shadow:0 16px 36px rgba(0,0,0,.12);margin-bottom:26px}
+.kicker{font-weight:800;letter-spacing:.08em;color:#e7cf8a;font-size:14px}.hero h1{font-size:40px;line-height:1.2;letter-spacing:-1.5px;margin:8px 0 12px}.hero p{font-size:18px;line-height:1.7;margin:0;color:#e9f2ed}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}.card{background:white;border:1px solid var(--line);border-radius:22px;padding:26px;box-shadow:0 8px 24px rgba(15,23,42,.05)}
+.card h2{font-size:23px;line-height:1.4;margin:0 0 10px}.card p{color:var(--muted);font-size:16px;line-height:1.7;min-height:54px}.btn{display:inline-block;text-decoration:none;background:var(--green);color:white;padding:12px 18px;border-radius:12px;font-weight:800}.btn:hover{background:var(--green2)}
+.section-title{font-size:27px;margin:38px 0 16px}.gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}.photo{background:white;border:1px solid var(--line);border-radius:22px;padding:14px;overflow:hidden}.photo img{width:100%;height:auto;display:block;border-radius:14px}.photo p{margin:10px 4px 4px;color:var(--muted);font-size:15px}.foot{margin-top:36px;text-align:center;color:var(--muted);font-size:14px}
+@media(max-width:760px){.wrap{padding:24px 14px 50px}.hero{padding:30px 22px;border-radius:20px}.hero h1{font-size:30px}.grid,.gallery{grid-template-columns:1fr}.card p{min-height:auto}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <section class="hero">
+    <div class="kicker">EREZ CORPORATION</div>
+    <h1>온라인 마케팅 컨설팅 보고서</h1>
+    <p>에레즈코퍼레이션의 온라인 마케팅 현황 진단과 검색 → 전문성 → 상품선택 → 구매 → 재구매·B2B로 이어지는 핵심 통합전략을 정리했습니다.</p>
+  </section>
 
+  <section class="grid">
+    <article class="card">
+      <h2>① 온라인 마케팅 현황 심층분석 보고서</h2>
+      <p>스마트스토어, 네이버 블로그, 검색, PR, 전시회, 온라인 광고 및 B2B 관점에서 현재 상태를 진단합니다.</p>
+      <a class="btn" href="report1.html">보고서 열기</a>
+    </article>
+    <article class="card">
+      <h2>② 온라인 마케팅 핵심 통합전략</h2>
+      <p>SEARCH → TRUST → CHOOSE → BUY → REPEAT → B2B의 하나의 고객 흐름으로 온라인 채널을 통합합니다.</p>
+      <a class="btn" href="report2.html">보고서 열기</a>
+    </article>
+  </section>
+
+  <h2 class="section-title">에레즈 브랜드 이미지</h2>
+  <section class="gallery">
+    <article class="photo">
+      <img src="erez-guatemala-poster.png" alt="Cafe Erez Guatemala Hand Drip Coffee">
+      <p>Guatemala Hand Drip Coffee 브랜드 이미지</p>
+    </article>
+    <article class="photo">
+      <img src="erez-philosophy-poster.png" alt="Cafe Erez Philosophy Guatemala Coffee">
+      <p>Cafe Erez Philosophy 브랜드 이미지</p>
+    </article>
+  </section>
+
+  <div class="foot">CAFE EREZ · GUATEMALA COFFEE SPECIALIST</div>
+</div>
+</body>
+</html>
