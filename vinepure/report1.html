@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>식초상점(Vinepure) 온라인 마케팅 현황 분석 보고서</title>
+<style>
+:root{
+  --navy:#132238;
+  --blue:#2457d6;
+  --sky:#eef4ff;
+  --green:#0f766e;
+  --mint:#eefaf7;
+  --orange:#b45309;
+  --amber:#fff7ed;
+  --red:#b42318;
+  --rose:#fff1f2;
+  --ink:#182230;
+  --muted:#667085;
+  --line:#e4e7ec;
+  --bg:#f7f9fc;
+  --white:#ffffff;
+  --shadow:0 12px 34px rgba(16,24,40,.07);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Apple SD Gothic Neo","Noto Sans KR",Arial,sans-serif;
+  line-height:1.75;
+  word-break:keep-all;
+}
+.wrap{max-width:1080px;margin:0 auto;padding:48px 22px 90px}
+.hero{
+  background:linear-gradient(135deg,#12233c,#2457d6);
+  color:#fff;
+  border-radius:28px;
+  padding:42px 40px;
+  box-shadow:var(--shadow);
+  margin-bottom:24px;
+}
+.eyebrow{font-size:13px;font-weight:800;letter-spacing:.08em;opacity:.82;margin-bottom:8px}
+h1{font-size:38px;line-height:1.25;margin:0 0 14px;letter-spacing:-1.3px}
+.hero p{margin:0;color:rgba(255,255,255,.88);font-size:17px}
+.meta{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+.badge{
+  display:inline-flex;align-items:center;
+  padding:7px 11px;border-radius:999px;
+  background:rgba(255,255,255,.14);
+  border:1px solid rgba(255,255,255,.22);
+  font-size:13px;font-weight:700;
+}
+.toc{
+  background:var(--white);border:1px solid var(--line);
+  border-radius:22px;padding:24px 26px;margin:20px 0 26px;box-shadow:var(--shadow)
+}
+.toc strong{display:block;margin-bottom:10px;color:var(--navy)}
+.toc a{color:var(--blue);text-decoration:none;margin-right:14px;display:inline-block;padding:4px 0}
+.section{
+  background:var(--white);
+  border:1px solid var(--line);
+  border-radius:22px;
+  padding:30px 32px;
+  margin:18px 0;
+  box-shadow:var(--shadow);
+}
+h2{font-size:26px;line-height:1.35;margin:0 0 18px;color:var(--navy);letter-spacing:-.6px}
+h3{font-size:19px;margin:24px 0 10px;color:var(--navy)}
+p{margin:8px 0 14px}
+ul,ol{padding-left:22px;margin:10px 0 16px}
+li{margin:7px 0}
+.quote{
+  border-left:5px solid var(--blue);
+  background:var(--sky);
+  border-radius:14px;
+  padding:18px 20px;
+  margin:18px 0;
+  font-weight:800;
+  color:#173b8f;
+}
+.note{
+  background:#f8fafc;border:1px solid var(--line);
+  border-radius:14px;padding:16px 18px;color:#475467
+}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.card{
+  border:1px solid var(--line);border-radius:16px;padding:18px;background:#fff
+}
+.card h3{margin-top:0}
+.kpi{font-size:28px;font-weight:900;color:var(--blue);margin-bottom:4px}
+.table-wrap{overflow-x:auto;margin-top:12px}
+table{width:100%;border-collapse:collapse;min-width:680px;font-size:15px}
+th,td{border-bottom:1px solid var(--line);padding:13px 12px;text-align:left;vertical-align:top}
+th{background:#f8fafc;color:#344054;font-weight:800}
+.tag{
+  display:inline-block;border-radius:999px;padding:4px 9px;
+  font-size:12px;font-weight:800;background:var(--sky);color:var(--blue);margin:2px 4px 2px 0
+}
+.flow{
+  display:flex;gap:8px;align-items:stretch;flex-wrap:wrap;margin:18px 0
+}
+.flow span{
+  flex:1 1 130px;padding:15px 12px;border-radius:14px;
+  background:var(--sky);border:1px solid #d9e5ff;text-align:center;font-weight:800;color:#173b8f
+}
+.flow b{align-self:center;color:#98a2b3}
+.priority{
+  display:flex;gap:14px;align-items:flex-start;border:1px solid var(--line);
+  border-radius:16px;padding:17px 18px;margin:10px 0
+}
+.num{
+  width:34px;height:34px;min-width:34px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;background:var(--navy);color:white;font-weight:900
+}
+.callout-green{background:var(--mint);border-color:#cceee8}
+.callout-orange{background:var(--amber);border-color:#fed7aa}
+.callout-red{background:var(--rose);border-color:#fecdd3}
+.small{font-size:13px;color:var(--muted)}
+footer{color:var(--muted);font-size:13px;text-align:center;padding-top:22px}
+@media(max-width:720px){
+  .wrap{padding:18px 12px 54px}
+  .hero{padding:30px 23px;border-radius:20px}
+  h1{font-size:30px}
+  .section{padding:22px 19px;border-radius:18px}
+  h2{font-size:23px}
+  .grid{grid-template-columns:1fr}
+  .toc{padding:20px}
+  body{word-break:normal}
+}
+@media print{
+  body{background:#fff}
+  .wrap{max-width:none;padding:0}
+  .hero,.section,.toc{box-shadow:none;break-inside:avoid}
+  .hero{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .section{border-color:#d0d5dd}
+  a{color:inherit;text-decoration:none}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="hero">
+    <div class="eyebrow">SMALL BUSINESS DIGITAL MARKETING REPORT</div>
+    <h1>식초상점(Vinepure)<br>온라인 마케팅 현황 분석 보고서</h1>
+    <p>브랜드 자산, 온라인 채널, 콘텐츠, 구매전환 구조를 한눈에 파악하기 위한 컨설팅용 요약 보고서</p>
+    <div class="meta">
+      <span class="badge">지역: 경기도 성남시</span>
+      <span class="badge">조사기준: 2026.08.12</span>
+      <span class="badge">홈페이지 · 스마트스토어 · Instagram · YouTube 중심</span>
+    </div>
+  </header>
+
+  <nav class="toc">
+    <strong>빠른 보기</strong>
+    <a href="#summary">핵심진단</a><a href="#channels">채널현황</a><a href="#swot">SWOT</a>
+    <a href="#issues">핵심문제</a><a href="#strategy">통합전략</a><a href="#priority">우선순위</a>
+  </nav>
+
+  <section class="section" id="summary">
+    <h2>1. 핵심 진단</h2>
+    <div class="quote">식초상점은 단순한 식초 판매점이 아니라, ‘송영미 발효 전문가의 전문성 + 프리미엄 자연발효 제품 + 교육/컨설팅 + 셰프·팝업 경험’이 결합된 전문 발효 브랜드에 가깝다.</div>
+    <div class="grid">
+      <div class="card"><h3>전문가 자산</h3><p>대표자의 발효 경험과 교육·컨설팅 경력이 브랜드 신뢰의 중심이다.</p></div>
+      <div class="card"><h3>제품 스토리</h3><p>과일·곡물·약초 식초, 누룩소금, 콤부차 등으로 확장 가능한 제품군을 보유한다.</p></div>
+      <div class="card"><h3>외부 신뢰</h3><p>셰프 협업, 백화점 팝업, 전시 경험 등이 프리미엄 브랜드 이미지를 강화한다.</p></div>
+      <div class="card"><h3>핵심 과제</h3><p>좋은 브랜드 자산이 스마트스토어 구매와 재구매로 연결되는 전환 구조를 강화해야 한다.</p></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>2. 브랜드 및 사업 구조</h2>
+    <p>식초상점은 자연발효 식초 브랜드 <strong>Vinepure(비네퓨어)</strong>를 중심으로 제품 판매와 발효 교육·콘텐츠를 함께 운영하는 구조다.</p>
+    <h3>주요 제품 영역</h3>
+    <p>
+      <span class="tag">과일식초</span><span class="tag">곡물식초</span><span class="tag">약초식초</span>
+      <span class="tag">누룩소금</span><span class="tag">콤부차</span><span class="tag">선물세트 확장 가능</span>
+    </p>
+    <div class="note">컨설팅 관점에서는 B2C 단품 판매만이 아니라 B2B·교육·셰프/레스토랑 협업까지 확장 가능한 브랜드로 보는 것이 중요하다.</div>
+  </section>
+
+  <section class="section" id="channels">
+    <h2>3. 온라인 채널 현황</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>채널</th><th>주요 역할</th><th>진단</th></tr></thead>
+        <tbody>
+          <tr><td>공식 홈페이지</td><td>브랜드 소개·철학·신뢰 형성</td><td>브랜드 신뢰 허브 역할 강화 필요</td></tr>
+          <tr><td>네이버 스마트스토어</td><td>직접 판매</td><td>핵심 구매전환 채널</td></tr>
+          <tr><td>Instagram</td><td>발효 과정·대표 활동·제품·팝업</td><td>활발한 콘텐츠 채널</td></tr>
+          <tr><td>YouTube</td><td>교육·전문성·발효 영상</td><td>검색형 콘텐츠로 확장 여지 큼</td></tr>
+          <tr><td>Threads / Facebook</td><td>대표자 브랜딩·교육·근황</td><td>보조 채널</td></tr>
+          <tr><td>외부 미디어·전시</td><td>브랜드 신뢰·권위 형성</td><td>강력한 Earned Media 자산</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="quote">채널의 개수가 부족한 것이 아니라, 여러 채널이 하나의 구매 흐름으로 충분히 묶이지 않은 것이 핵심 문제다.</div>
+  </section>
+
+  <section class="section">
+    <h2>4. 채널별 진단</h2>
+    <h3>공식 홈페이지</h3>
+    <p>스마트스토어와 경쟁하는 쇼핑몰보다 <strong>“왜 식초상점이어야 하는가”</strong>를 설명하는 브랜드 신뢰 플랫폼으로 운영하는 것이 적절하다.</p>
+    <ul>
+      <li>송영미 대표의 전문성·경력</li>
+      <li>자연발효와 숙성 과정</li>
+      <li>제품별 선택 기준</li>
+      <li>셰프·팝업·전시 사례</li>
+      <li>스마트스토어 구매 연결</li>
+    </ul>
+
+    <h3>네이버 스마트스토어</h3>
+    <p>Instagram·YouTube·팝업·교육에서 발생한 관심을 실제 매출로 바꾸는 마지막 단계다. 제품이 많을수록 초보 소비자는 선택이 어려워지므로 <strong>원료 중심 진열 → 목적 중심 선택</strong>으로 개편할 필요가 있다.</p>
+
+    <h3>Instagram</h3>
+    <p>발효 제조 과정, 대표자 브랜딩, 셰프 네트워크, 백화점 팝업 등 콘텐츠 원재료가 매우 풍부하다. 다만 활동 기록형 콘텐츠를 제품 선택과 구매 CTA로 더 강하게 연결해야 한다.</p>
+
+    <h3>YouTube</h3>
+    <p>교육·기록형 역할을 넘어 <strong>“천연발효식초 고르는 법”, “발효식초 먹는 법”, “요리용 식초 활용법”</strong>과 같은 검색형 영상이 필요하다.</p>
+  </section>
+
+  <section class="section">
+    <h2>5. 현재 광고 운영 진단</h2>
+    <p>외부에서는 네이버 검색광고, 쇼핑검색광고, Meta 광고비, ROAS, 리타겟팅 운영 여부를 정확히 확인할 수 없다.</p>
+    <div class="note">확인 가능한 공개 활동은 Paid Media보다 <strong>Owned Media + Earned Media + Offline Event</strong> 비중이 상대적으로 높다.</div>
+    <div class="flow">
+      <span>SNS 직접 운영</span><b>+</b><span>전문가 콘텐츠</span><b>+</b><span>팝업·전시</span><b>+</b><span>교육·셰프 협업</span>
+    </div>
+  </section>
+
+  <section class="section" id="swot">
+    <h2>6. SWOT 분석</h2>
+    <div class="grid">
+      <div class="card callout-green">
+        <h3>Strength</h3>
+        <ul><li>대표자의 전문성</li><li>발효·숙성 콘텐츠</li><li>셰프 네트워크</li><li>백화점·전시 신뢰</li><li>교육사업 확장성</li></ul>
+      </div>
+      <div class="card callout-orange">
+        <h3>Weakness</h3>
+        <ul><li>초보자가 제품 선택하기 어려움</li><li>브랜드명·채널 메시지 분산</li><li>구매 CTA 상대적 약함</li><li>검색형 콘텐츠 부족</li><li>대표자 의존도 높음</li></ul>
+      </div>
+      <div class="card">
+        <h3>Opportunity</h3>
+        <ul><li>발효·웰니스 관심</li><li>K-Food</li><li>프리미엄 식재료</li><li>선물시장</li><li>셰프 콘텐츠</li></ul>
+      </div>
+      <div class="card callout-red">
+        <h3>Threat</h3>
+        <ul><li>대기업 식초</li><li>애플사이다비니거</li><li>콤부차 브랜드</li><li>건강음료 경쟁</li><li>가격 비교 심화</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="issues">
+    <h2>7. 가장 중요한 문제 5가지</h2>
+    <div class="priority"><div class="num">1</div><div><strong>브랜드 자산은 강하지만 판매구조가 상대적으로 약하다.</strong><br>콘텐츠 추가 생산보다 현재 자산의 정리와 연결이 우선이다.</div></div>
+    <div class="priority"><div class="num">2</div><div><strong>대표자의 전문성이 상품 구매까지 충분히 연결되지 않는다.</strong><br>“송영미가 만들기 때문에 무엇이 다른가”를 구매 근거로 번역해야 한다.</div></div>
+    <div class="priority"><div class="num">3</div><div><strong>제품 중심 분류가 소비자에게 어렵다.</strong><br>원료보다 ‘누구에게 / 언제 / 어떻게’가 먼저 보여야 한다.</div></div>
+    <div class="priority"><div class="num">4</div><div><strong>검색 콘텐츠가 상대적으로 부족하다.</strong><br>네이버·Google에서 자연발효식초 관련 검색 수요를 확보해야 한다.</div></div>
+    <div class="priority"><div class="num">5</div><div><strong>모든 채널이 스마트스토어 매출로 연결되어야 한다.</strong><br>홈페이지·SNS·영상·팝업·교육·언론의 CTA를 일관되게 설계해야 한다.</div></div>
+  </section>
+
+  <section class="section" id="strategy">
+    <h2>8. 핵심 통합 마케팅 구조</h2>
+    <div class="flow">
+      <span>검색</span><b>→</b><span>송영미 전문가 발견</span><b>→</b><span>전문성 확인</span><b>→</b>
+      <span>제품 선택</span><b>→</b><span>스마트스토어 구매</span><b>→</b><span>재구매·교육·B2B</span>
+    </div>
+    <div class="quote">핵심 메시지: “식초를 파는 회사가 아니라, 발효 전문가가 만든 식초를 파는 회사.”</div>
+  </section>
+
+  <section class="section">
+    <h2>9. 브랜드 포지셔닝 제안</h2>
+    <div class="grid">
+      <div class="card"><h3>안 1</h3><p><strong>셰프들이 배우는 발효 전문가가 만든 식초</strong></p><p class="small">경쟁사가 복제하기 어려운 전문가·셰프 자산을 강조</p></div>
+      <div class="card"><h3>안 2</h3><p><strong>송영미 발효의 시간이 만든 자연발효식초, Vinepure</strong></p><p class="small">시간·숙성·장인 이미지를 강조</p></div>
+    </div>
+  </section>
+
+  <section class="section" id="priority">
+    <h2>10. 컨설팅 우선순위</h2>
+    <div class="priority"><div class="num">1</div><div><strong>스마트스토어 판매형 개편</strong><br>상품 분류, 상세페이지, 입문세트, 베스트 구성을 판매 중심으로 재설계</div></div>
+    <div class="priority"><div class="num">2</div><div><strong>검색형 콘텐츠 구축</strong><br>네이버 블로그 또는 홈페이지 SEO 콘텐츠 강화</div></div>
+    <div class="priority"><div class="num">3</div><div><strong>Instagram 역할 재설계</strong><br>활동 기록에서 고객 문제 해결·제품 전환 콘텐츠 비중 확대</div></div>
+    <div class="priority"><div class="num">4</div><div><strong>YouTube 검색형 콘텐츠</strong><br>발효식초 관련 질문을 짧고 검색 가능한 영상으로 축적</div></div>
+    <div class="priority"><div class="num">5</div><div><strong>브랜드 통합</strong><br>식초상점 / Vinepure / 송영미발효 / Academy의 관계 정리</div></div>
+    <div class="priority"><div class="num">6</div><div><strong>CRM·재구매</strong><br>첫 구매자를 재구매·수업·B2B 고객으로 연결</div></div>
+  </section>
+
+  <section class="section">
+    <h2>11. 최종 결론</h2>
+    <div class="quote">식초상점의 문제는 마케팅 자산의 부족이 아니라 ‘전환 구조의 부족’이다.</div>
+    <p>앞으로는 새로운 채널을 추가하기보다, 이미 보유한 전문가·제품·셰프·팝업·교육·전시 자산을 하나의 고객 여정으로 묶는 것이 가장 중요하다.</p>
+  </section>
+
+  <footer>식초상점(Vinepure) 온라인 마케팅 컨설팅 보고서 · 2026.08.12</footer>
+</div>
+</body>
+</html>
