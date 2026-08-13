@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>라폴리움 온라인 마케팅 심층 분석 보고서</title>
+<style>
+:root{
+  --green:#356859;
+  --green2:#5c8d7b;
+  --cream:#f6f3ea;
+  --white:#ffffff;
+  --ink:#1f2937;
+  --muted:#667085;
+  --line:#dde5df;
+  --accent:#dcebe4;
+  --gold:#b8863b;
+  --danger:#b54747;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Apple SD Gothic Neo","Noto Sans KR",Arial,sans-serif;
+  background:var(--cream);
+  color:var(--ink);
+  line-height:1.78;
+}
+.wrap{max-width:1100px;margin:0 auto;padding:46px 24px 80px}
+.hero{
+  background:linear-gradient(135deg,#2f5f52,#6e9b87);
+  color:#fff;
+  border-radius:28px;
+  padding:42px 38px;
+  box-shadow:0 18px 45px rgba(40,71,59,.18);
+}
+.eyebrow{font-size:14px;font-weight:800;letter-spacing:.12em;opacity:.88}
+h1{font-size:42px;line-height:1.25;margin:8px 0 14px;letter-spacing:-1.5px}
+.hero p{font-size:18px;margin:0;max-width:850px;opacity:.95}
+.meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.meta span{background:rgba(255,255,255,.14);padding:8px 12px;border-radius:999px;font-size:14px}
+section{margin-top:34px}
+.card{
+  background:var(--white);
+  border:1px solid var(--line);
+  border-radius:22px;
+  padding:30px;
+  box-shadow:0 10px 28px rgba(31,41,55,.05);
+}
+h2{font-size:28px;margin:0 0 18px;color:#264d43;letter-spacing:-.7px}
+h3{font-size:21px;margin:24px 0 10px;color:#355d52}
+p{font-size:17px;margin:10px 0}
+ul{padding-left:22px}
+li{font-size:17px;margin:7px 0}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.kpi{padding:22px;background:#f8fbf9;border:1px solid var(--line);border-radius:18px}
+.kpi b{display:block;color:#2e5d50;font-size:18px;margin-bottom:4px}
+.tag{display:inline-block;padding:5px 10px;border-radius:999px;background:var(--accent);color:#295548;font-size:13px;font-weight:800}
+.warning{background:#fff8ef;border-left:5px solid var(--gold);padding:18px 20px;border-radius:14px;margin:18px 0}
+.note{background:#f4f7fb;border-left:5px solid #54749a;padding:18px 20px;border-radius:14px;margin:18px 0}
+.good{background:#f2faf5;border-left:5px solid var(--green2);padding:18px 20px;border-radius:14px;margin:18px 0}
+table{width:100%;border-collapse:separate;border-spacing:0;overflow:hidden;border:1px solid var(--line);border-radius:16px;margin-top:16px;font-size:15px;background:#fff}
+th,td{padding:14px 13px;border-bottom:1px solid var(--line);vertical-align:top;text-align:left}
+th{background:#eef5f1;color:#244a3f;font-weight:800}
+tr:last-child td{border-bottom:none}
+.small{font-size:14px;color:var(--muted)}
+.priority{display:flex;gap:12px;align-items:flex-start;margin:12px 0}
+.num{min-width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#356859;color:#fff;font-weight:800}
+.footer{margin-top:34px;text-align:center;color:var(--muted);font-size:13px}
+a{color:#2a6958;text-decoration:none}
+a:hover{text-decoration:underline}
+@media(max-width:780px){
+  .wrap{padding:22px 14px 50px}
+  .hero{padding:30px 22px}
+  h1{font-size:32px}
+  h2{font-size:24px}
+  .grid{grid-template-columns:1fr}
+  table{font-size:14px;display:block;overflow-x:auto}
+}
+@media print{
+  body{background:#fff}
+  .wrap{max-width:none;padding:0}
+  .hero,.card{box-shadow:none}
+  .hero{border-radius:0}
+  a{color:inherit;text-decoration:none}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="hero">
+    <div class="eyebrow">SMALL BUSINESS DIGITAL MARKETING REPORT</div>
+    <h1>라폴리움 온라인 마케팅 심층 분석 보고서</h1>
+    <p>성남 하이테크밸리 소재 라폴리움의 제품·온라인 채널·광고·검색 노출·리뷰·전환 구조를 점검하고, 향후 3개월 실행 우선순위를 제안합니다.</p>
+    <div class="meta">
+      <span>기준일: 2026.08.13</span>
+      <span>지역: 성남시 중원구</span>
+      <span>업종: 식품제조가공 / 웰니스 티·액상차</span>
+      <span>공식 홈페이지: lafolium.org</span>
+    </div>
+  </header>
+
+  <section class="card">
+    <h2>1. Executive Summary</h2>
+    <div class="good"><strong>핵심 진단:</strong> 라폴리움은 제품 자체의 콘셉트와 제조 기반은 분명하지만, 온라인에서 이를 충분히 설명하고 반복 노출하는 채널 구조가 약합니다. 현재는 <b>공식몰 중심의 판매 구조</b>에 비해 검색·콘텐츠·SNS·지도·리뷰 자산이 부족한 편입니다.</div>
+    <div class="grid">
+      <div class="kpi"><b>강점</b>현대적 웰니스 콘셉트, 허브·과채 블렌딩, 액상차·침출차·아로마 제품까지 확장 가능한 제품군</div>
+      <div class="kpi"><b>약점</b>브랜드 검색량·SNS 활동·외부 리뷰·검색 노출·콘텐츠 축적이 제한적</div>
+      <div class="kpi"><b>기회</b>헬시플레저, 기능성 음료, 자연 원료, 선물형 웰니스 소비 확대</div>
+      <div class="kpi"><b>우선 과제</b>검색형 콘텐츠 → 제품 이해 → 구매 → 리뷰 → 재구매의 디지털 판매 동선 구축</div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>2. 기업·브랜드 및 제품 구조</h2>
+    <p>라폴리움은 경기도 성남시에 위치한 식음료 전문 기업으로, 허브와 과채류 원료를 활용한 웰니스 음료와 티 제품군을 운영하고 있습니다. 공개 정보상 식품제조가공업 기반을 갖고 있으며, 단순 소매 브랜드라기보다 <b>직접 제조 역량을 가진 웰니스 식음료 브랜드</b>로 보는 것이 적절합니다.</p>
+    <h3>주요 제품·서비스</h3>
+    <ul>
+      <li><b>초능력 풀파워 시리즈</b> : 레몬, 진저레몬 등 현대인을 겨냥한 액상차·에너지샷형 제품</li>
+      <li><b>허브티·침출차</b> : 캐모마일, 라벤더, 페퍼민트, 히비스커스 등 허브 기반 제품</li>
+      <li><b>풀파워 마인드 밸런스</b> : 휴식·밸런스 등 웰니스 메시지를 강조하는 제품</li>
+      <li><b>트리폴리움</b> : 아로마·라이프스타일 제품군</li>
+      <li><b>파이토 워크샵 / 교육</b> : 허벌리스트 과정, 원데이 클래스 등 체험·교육형 서비스</li>
+    </ul>
+    <div class="note">경쟁사는 단순히 성남 지역의 차 제조업체가 아니라, 실제 소비자가 ‘활력·피로·웰니스·자연원료·허브티’ 목적에서 대체 구매할 수 있는 브랜드를 기준으로 비교해야 합니다. 따라서 전통차 업체는 일부 직접 경쟁군일 뿐이며, 전국의 기능성 음료·허브티 브랜드도 온라인 경쟁군에 포함하는 것이 타당합니다.</div>
+  </section>
+
+  <section class="card">
+    <h2>3. 온라인 채널 인벤토리</h2>
+    <table>
+      <thead><tr><th>채널</th><th>확인 상태</th><th>현재 역할</th><th>진단</th></tr></thead>
+      <tbody>
+        <tr><td>공식 홈페이지 / 쇼핑몰</td><td><span class="tag">운영 확인</span></td><td>브랜드 소개, 제품 판매, 교육 안내</td><td>가장 중요한 중심 채널. 판매 기능은 있으나 외부 유입을 끌어오는 콘텐츠 엔진이 약함</td></tr>
+        <tr><td>네이버페이</td><td><span class="tag">연동 확인</span></td><td>간편결제·구매 전환</td><td>구매 편의성은 긍정적</td></tr>
+        <tr><td>인스타그램</td><td><span class="tag">운영 확인</span></td><td>제품·이벤트 홍보</td><td>활동량과 팔로워 규모가 작아 브랜드 자산 축적이 부족</td></tr>
+        <tr><td>네이버 블로그</td><td>공식 채널 미확인</td><td>검색 유입</td><td>현재 가장 큰 공백 중 하나</td></tr>
+        <tr><td>카카오채널</td><td>공식 채널 미확인</td><td>CRM·재구매·문의</td><td>구매 후 고객 관리 수단이 약함</td></tr>
+        <tr><td>유튜브</td><td>공식 채널 미확인</td><td>제품 설명·브랜드 신뢰</td><td>교육형 콘텐츠와 궁합이 좋지만 현재 공백</td></tr>
+        <tr><td>네이버 플레이스 / 지도</td><td>뚜렷한 노출 미확인</td><td>기업 위치·방문·신뢰</td><td>B2B·교육·공장 방문을 생각하면 등록 가치가 있음</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>4. 홈페이지·판매 구조 진단</h2>
+    <h3>좋은 점</h3>
+    <ul>
+      <li>제품, 교육, 라이프스타일 카테고리가 구분되어 있어 사업 확장성이 보입니다.</li>
+      <li>네이버페이 등 결제 편의성이 확보되어 있습니다.</li>
+      <li>‘GO SHOP’, 교육 신청 등 CTA가 존재해 구매·신청 전환 구조의 기본 틀은 있습니다.</li>
+    </ul>
+    <h3>개선이 필요한 점</h3>
+    <ul>
+      <li>브랜드를 처음 접한 고객이 “라폴리움이 왜 다른가”를 5초 안에 이해하기 어렵습니다.</li>
+      <li>제품별 핵심 고객 문제, 섭취 장면, 선택 이유가 보다 선명하게 드러날 필요가 있습니다.</li>
+      <li>검색 유입용 정보성 페이지와 블로그형 콘텐츠가 부족합니다.</li>
+      <li>제품 상세페이지에서 리뷰, 활용법, 비교표, FAQ, 재구매 유도 장치가 강화될 필요가 있습니다.</li>
+    </ul>
+    <div class="warning"><strong>중요:</strong> 식품 광고에서는 ‘면역 강화’, ‘항산화 효과’, ‘피로 회복’ 등 질병·의학적 효능으로 오해될 수 있는 직접적 표현은 관련 법규 검토 없이 사용하면 위험할 수 있습니다. 향후 광고 문구는 ‘활력 있는 일상’, ‘상쾌한 루틴’, ‘허브·과채 블렌딩’처럼 식품 범위 내 표현을 우선 권장합니다.</div>
+  </section>
+
+  <section class="card">
+    <h2>5. 광고 운영 현황</h2>
+    <p>공개적으로 확인 가능한 범위에서는 네이버 파워링크, Meta 광고 라이브러리, Google 광고 투명성 정보 등에서 라폴리움의 활발한 상시 광고 집행 흔적은 뚜렷하게 확인되지 않았습니다.</p>
+    <table>
+      <thead><tr><th>광고 영역</th><th>공개 확인 결과</th><th>판단</th></tr></thead>
+      <tbody>
+        <tr><td>네이버 검색광고</td><td>뚜렷한 상위 광고 노출 미확인</td><td>현재 적극 집행 근거 부족</td></tr>
+        <tr><td>Meta 광고</td><td>활발한 공개 집행 흔적 미확인</td><td>브랜드 인지도 확대용 테스트 가능</td></tr>
+        <tr><td>Google 광고</td><td>공개 확인 범위에서 뚜렷한 흔적 미확인</td><td>브랜드 검색·제품 키워드 중심 소액 테스트 적합</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>6. SEO·검색 노출 진단</h2>
+    <p>브랜드명 검색에서는 공식몰이 확인되지만, ‘허브티’, ‘액상차’, ‘웰니스 음료’, ‘진저 레몬’, ‘성남 허브티’ 등 비브랜드 검색어에서 라폴리움이 반복적으로 노출되는 구조는 약한 편으로 보입니다.</p>
+    <h3>추천 검색 콘텐츠 주제</h3>
+    <ul>
+      <li>아침에 마시기 좋은 허브·과채 음료 고르는 법</li>
+      <li>진저레몬 음료를 즐기는 5가지 방법</li>
+      <li>카페인 대신 선택하는 웰니스 티 루틴</li>
+      <li>회사 탕비실·기업 선물용 웰니스 음료 선택 가이드</li>
+      <li>허브티와 액상차의 차이, 어떤 사람에게 맞을까</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>7. 리뷰·평판 및 외부 노출</h2>
+    <p>공식몰 일부 상품에는 구매평이 존재하지만, 외부 플랫폼에서 브랜드 신뢰를 쌓는 리뷰 자산은 상대적으로 부족합니다. 특히 신규 브랜드의 경우 고객은 자사몰 설명보다 <b>네이버·SNS·블로그·쇼핑 리뷰 등 제3자 신호</b>를 더 많이 참고하는 경향이 있습니다.</p>
+    <div class="priority"><div class="num">1</div><div><b>자사몰 리뷰 확대</b><br>구매 7~10일 후 후기 요청 메시지, 포토리뷰 쿠폰 등 운영</div></div>
+    <div class="priority"><div class="num">2</div><div><b>체험단·마이크로 인플루언서</b><br>웰니스·직장인·육아·홈카페 카테고리 중심으로 소규모 반복 실행</div></div>
+    <div class="priority"><div class="num">3</div><div><b>B2B 사용 사례</b><br>기업 행사, 선물, 워크숍, 클래스 납품 사례를 콘텐츠화</div></div>
+  </section>
+
+  <section class="card">
+    <h2>8. 경쟁 대비 Gap 분석</h2>
+    <p>라폴리움은 전통차 브랜드와 일부 제품 카테고리가 겹치지만, 본질적으로는 <b>현대적 웰니스·허브·기능성 콘셉트의 프리미엄 티/액상차 브랜드</b>에 더 가깝습니다. 경쟁은 지역보다 온라인 구매 상황에서 발생합니다.</p>
+    <table>
+      <thead><tr><th>비교 항목</th><th>라폴리움</th><th>온라인 강한 경쟁 브랜드의 일반적 특징</th><th>Gap</th></tr></thead>
+      <tbody>
+        <tr><td>제품 스토리</td><td>허브·과채·웰니스 메시지 보유</td><td>고객 문제와 섭취 상황을 한 문장으로 명확히 설명</td><td>브랜드 스토리를 구매 이유로 더 압축할 필요</td></tr>
+        <tr><td>검색 콘텐츠</td><td>약함</td><td>블로그·콘텐츠 페이지 대량 축적</td><td>가장 큰 격차</td></tr>
+        <tr><td>SNS</td><td>활동 제한적</td><td>숏폼·리뷰·UGC·루틴 콘텐츠 반복</td><td>콘텐츠 빈도 부족</td></tr>
+        <tr><td>리뷰</td><td>자사몰 일부 존재</td><td>쇼핑몰·SNS·블로그 다중 리뷰 구조</td><td>외부 신뢰 신호 부족</td></tr>
+        <tr><td>광고</td><td>활발한 집행 근거 부족</td><td>소액 검색·리타게팅으로 전환 축적</td><td>데이터 기반 광고 학습 부족</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>9. 우선순위 개선과제</h2>
+    <h3>즉시 30일</h3>
+    <div class="priority"><div class="num">1</div><div><b>대표 제품 3종만 선정</b><br>‘초능력 풀파워 레몬’, ‘진저레몬’, ‘마인드 밸런스’ 등 핵심 제품 중심으로 메시지를 통일</div></div>
+    <div class="priority"><div class="num">2</div><div><b>네이버 블로그 개설 또는 활성화</b><br>주 2회, 검색형 정보 콘텐츠를 축적</div></div>
+    <div class="priority"><div class="num">3</div><div><b>인스타그램 리뉴얼</b><br>제품 사진 위주에서 ‘마시는 순간·사용 장면·리뷰·브랜드 철학’ 중심으로 전환</div></div>
+    <div class="priority"><div class="num">4</div><div><b>리뷰 수집 체계화</b><br>구매 후 자동 메시지, 포토리뷰 혜택, 고객 활용사진 재가공</div></div>
+
+    <h3>1~3개월</h3>
+    <ul>
+      <li>네이버 검색광고를 ‘브랜드 + 제품명 + 구매의도 키워드’ 중심으로 소액 테스트</li>
+      <li>Meta 광고는 제품 단독 광고보다 리뷰·사용 장면 콘텐츠로 테스트</li>
+      <li>B2B 선물·기업복지·워크숍·클래스 전용 랜딩페이지 제작</li>
+      <li>제품 상세페이지에 섭취 장면, FAQ, 비교표, 리뷰 요약, 재구매 CTA 추가</li>
+    </ul>
+
+    <h3>3~6개월</h3>
+    <ul>
+      <li>성과 좋은 대표 제품에 광고 집중</li>
+      <li>정기구매 또는 묶음구성 개발</li>
+      <li>기업 선물·웰니스 프로그램과 교육 서비스를 연계한 B2B 패키지화</li>
+      <li>브랜드 검색량과 자연검색 매출 비중을 핵심 성장지표로 관리</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>10. KPI 제안</h2>
+    <div class="grid">
+      <div class="kpi"><b>검색</b>브랜드명 검색량, 핵심 키워드 노출 수, 블로그 유입</div>
+      <div class="kpi"><b>콘텐츠</b>월 발행 수, 저장·공유 수, 프로필 클릭률</div>
+      <div class="kpi"><b>판매</b>제품 상세 방문→구매 전환율, 객단가, 재구매율</div>
+      <div class="kpi"><b>광고</b>CPC, CTR, 구매당 비용, ROAS</div>
+      <div class="kpi"><b>리뷰</b>월 신규 리뷰 수, 포토리뷰 비중, 평점</div>
+      <div class="kpi"><b>B2B</b>기업 문의 수, 샘플 발송 수, 계약 전환율</div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>11. 컨설팅 결론</h2>
+    <p>라폴리움의 핵심 과제는 ‘제품이 없는 것’이 아니라, <b>좋은 제품을 고객이 발견하고 이해하고 믿고 구매하게 만드는 온라인 구조가 약한 것</b>입니다.</p>
+    <div class="good"><strong>권장 통합 구조:</strong><br><b>검색 노출 → 제품 이해 → 사용 장면 확인 → 리뷰 신뢰 → 구매 → 재구매 → B2B 확장</b></div>
+    <p>따라서 단기적으로는 여러 채널을 동시에 넓히기보다, <b>대표 제품 3종 + 네이버 검색 콘텐츠 + 인스타그램 + 리뷰 + 소액 광고</b>에 집중하는 것이 효율적입니다.</p>
+  </section>
+
+  <section class="card">
+    <h2>12. 주요 출처</h2>
+    <ul>
+      <li><a href="https://lafolium.org/home" target="_blank">라폴리움 공식 홈페이지</a></li>
+      <li><a href="https://www.poolixhub.io/company/165536" target="_blank">풀릭스 허브 - 라폴리움 기업 정보</a></li>
+      <li><a href="https://moneypin.biz/bizno/detail/7413201116/" target="_blank">사업자 정보 조회 - 라폴리움</a></li>
+      <li><a href="http://lafolium.org/47/?idx=83" target="_blank">초능력 풀파워 레몬 제품 페이지</a></li>
+    </ul>
+    <p class="small">※ 본 보고서는 2026년 8월 13일 기준 공개적으로 확인 가능한 웹 정보와 이전 심층 조사 결과를 바탕으로 작성되었습니다. 광고 운영, 매출, 유입 데이터 등 비공개 정보는 실제 계정 접근 시 추가 검증이 필요합니다.</p>
+  </section>
+
+  <div class="footer">LAFOLIUM DIGITAL MARKETING REPORT · 2026</div>
+</div>
+</body>
+</html>
