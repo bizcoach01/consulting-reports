@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>수라채움 온라인 마케팅 현황진단 보고서</title>
+<style>
+  :root{
+    --navy:#123047;
+    --blue:#1f6f8b;
+    --sky:#eaf5f8;
+    --green:#2f7d5b;
+    --amber:#b7791f;
+    --red:#b5473c;
+    --text:#1f2937;
+    --muted:#667085;
+    --line:#dde5ea;
+    --bg:#f6f8fa;
+    --white:#fff;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Apple SD Gothic Neo","Noto Sans KR",Arial,sans-serif;line-height:1.72;font-size:18px}
+  .wrap{max-width:1080px;margin:0 auto;padding:48px 24px 80px}
+  .hero{background:linear-gradient(135deg,#123047,#1f6f8b);color:#fff;border-radius:24px;padding:42px 36px;box-shadow:0 14px 40px rgba(18,48,71,.18)}
+  .hero .kicker{font-weight:800;opacity:.86;font-size:15px;letter-spacing:.04em}
+  h1{font-size:40px;line-height:1.2;margin:10px 0 14px;letter-spacing:-.03em}
+  .hero p{margin:0;font-size:19px;opacity:.95}
+  .meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+  .pill{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.24);padding:8px 12px;border-radius:999px;font-size:15px}
+  .section{margin-top:28px;background:#fff;border:1px solid var(--line);border-radius:20px;padding:30px 30px 32px;box-shadow:0 6px 24px rgba(16,24,40,.04)}
+  h2{font-size:28px;color:var(--navy);margin:0 0 18px;letter-spacing:-.02em}
+  h3{font-size:22px;color:var(--navy);margin:26px 0 10px}
+  p{margin:10px 0}
+  .summary-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:20px}
+  .card{border:1px solid var(--line);border-radius:16px;padding:18px;background:#fff}
+  .card b{display:block;font-size:15px;color:var(--muted);margin-bottom:8px}
+  .card strong{display:block;font-size:24px;color:var(--navy);line-height:1.25}
+  .card span{display:block;font-size:15px;color:var(--muted);margin-top:6px}
+  .callout{border-left:6px solid var(--blue);background:var(--sky);padding:18px 20px;border-radius:12px;margin-top:18px}
+  .callout strong{color:var(--navy)}
+  .score{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:10px;margin-top:12px}
+  .score > div{border:1px solid var(--line);padding:16px;border-radius:14px;background:#fbfcfd}
+  .good{color:var(--green);font-weight:800}
+  .mid{color:var(--amber);font-weight:800}
+  .weak{color:var(--red);font-weight:800}
+  table{width:100%;border-collapse:separate;border-spacing:0;overflow:hidden;border:1px solid var(--line);border-radius:14px;margin-top:14px;font-size:16px}
+  th,td{padding:14px 12px;border-bottom:1px solid var(--line);vertical-align:top;text-align:left}
+  th{background:#eef4f7;color:var(--navy);font-weight:800}
+  tr:last-child td{border-bottom:none}
+  .tag{display:inline-block;padding:4px 9px;border-radius:999px;font-size:13px;font-weight:800;margin-right:5px;white-space:nowrap}
+  .tag.official{background:#e8f5ee;color:#216446}
+  .tag.earned{background:#fff4df;color:#8c5a14}
+  .tag.unknown{background:#f0f2f5;color:#5d6672}
+  .tag.ad{background:#fdebea;color:#983c35}
+  ul{padding-left:24px;margin:10px 0}
+  li{margin:7px 0}
+  .priority{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:18px}
+  .priority .pbox{border:1px solid var(--line);border-radius:16px;padding:18px;background:#fff}
+  .priority .pbox h3{margin:0 0 10px;font-size:20px}
+  .priority .now{border-top:5px solid var(--green)}
+  .priority .m30{border-top:5px solid var(--blue)}
+  .priority .m90{border-top:5px solid var(--amber)}
+  .checklist{display:grid;grid-template-columns:1fr 1fr;gap:10px 24px}
+  .check{background:#fbfcfd;border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+  .sources a{color:var(--blue);word-break:break-all}
+  .foot{margin-top:28px;color:var(--muted);font-size:14px;text-align:center}
+  @media(max-width:800px){
+    body{font-size:17px}
+    .wrap{padding:20px 14px 50px}
+    .hero{padding:30px 22px;border-radius:18px}
+    h1{font-size:31px}
+    .summary-grid,.priority{grid-template-columns:1fr 1fr}
+    .score{grid-template-columns:1fr 1fr}
+    .section{padding:24px 18px;border-radius:16px}
+    table{font-size:15px;display:block;overflow-x:auto;white-space:nowrap}
+    td{white-space:normal;min-width:150px}
+    .checklist{grid-template-columns:1fr}
+  }
+  @media(max-width:520px){
+    .summary-grid,.priority,.score{grid-template-columns:1fr}
+    h1{font-size:28px}
+    h2{font-size:24px}
+  }
+  @media print{
+    body{background:#fff;font-size:15px}
+    .wrap{max-width:none;padding:0}
+    .section,.hero{box-shadow:none;break-inside:avoid}
+    a{color:#000;text-decoration:none}
+  }
+
+  .feature-photo{margin:22px 0 8px;background:#fff;border:1px solid #e5e7eb;border-radius:18px;overflow:hidden;box-shadow:0 8px 24px rgba(15,23,42,.08)}
+  .feature-photo img{display:block;width:100%;max-height:520px;object-fit:cover}
+  .feature-photo figcaption{padding:12px 16px;color:#667085;font-size:14px;line-height:1.55}
+
+.report-nav{
+  display:flex;gap:10px;flex-wrap:wrap;align-items:center;
+  margin:18px 0 22px;padding:14px;
+  background:#ffffff;border:1px solid #dfe6eb;border-radius:14px;
+}
+.report-nav a{
+  display:inline-block;text-decoration:none;font-weight:800;
+  padding:10px 15px;border-radius:10px;border:1px solid #1f6f8b;
+  color:#1f6f8b;background:#fff;
+}
+.report-nav a.primary{background:#1f6f8b;color:#fff;}
+@media(max-width:520px){.report-nav a{width:100%;text-align:center}}
+
+</style>
+</head>
+<body>
+<div style="max-width:1050px;margin:0 auto;padding:0 16px;">
+<nav class="report-nav" aria-label="수라채움 보고서 메뉴">
+  <a class="primary" href="./index.html">온라인 마케팅 현황</a>
+  <a href="./action.html">즉시 실행과제 보기 →</a>
+</nav>
+</div>
+<div class="wrap">
+  <header class="hero">
+    <div class="kicker">소상공인 온라인 마케팅 현황진단</div>
+    <h1>수라채움 · 시흥 거북섬</h1>
+    <p>네이버플레이스, 검색노출, 블로그, 인스타그램, 예약·배달, 광고 흔적과 리뷰 평판을 한눈에 정리한 실무형 보고서</p>
+    <div class="meta">
+      <span class="pill">조사기준 2026.08.16</span>
+      <span class="pill">네이버 플레이스 ID 1159852496</span>
+      <span class="pill">업종: 한정식 · 한식</span>
+      <span class="pill">지역: 경기 시흥시 거북섬</span>
+    </div>
+  </header>
+
+  <figure class="feature-photo">
+    <img src="./surachaeum.jpg" alt="시흥 수라채움 매장 입구" loading="eager">
+    <figcaption>시흥 수라채움 매장 입구 · 제공 이미지</figcaption>
+  </figure>
+
+  <section class="section">
+    <h2>1. 한눈에 보는 진단</h2>
+    <div class="summary-grid">
+      <div class="card"><b>핵심 강점</b><strong>오션뷰 + 가족모임</strong><span>넓은 주차·단체룸·격식 있는 한정식</span></div>
+      <div class="card"><b>주요 운영채널</b><strong>네이버 + 인스타</strong><span>예약 전환과 사진형 콘텐츠 중심</span></div>
+      <div class="card"><b>광고 확인</b><strong>유료광고 미확인</strong><span>검색광고·SNS 광고의 공개 흔적 부족</span></div>
+      <div class="card"><b>가장 큰 과제</b><strong>검색 → 예약 연결</strong><span>리뷰·블로그·콘텐츠를 예약으로 더 강하게 연결</span></div>
+    </div>
+    <div class="callout"><strong>핵심 판단:</strong> 수라채움은 경쟁 한정식점보다 인스타그램과 네이버 예약 활용도가 좋은 편입니다. 다만 검색광고, 공식 블로그, 리뷰 응대 체계가 약해 <b>“좋은 매장인데 온라인 전환 장치가 아직 덜 갖춰진 상태”</b>로 판단됩니다.</div>
+  </section>
+
+  <section class="section">
+    <h2>2. 온라인 채널 맵</h2>
+    <div class="score">
+      <div><b>네이버플레이스</b><div class="good">운영 확인</div><small>매장정보·사진·메뉴·예약 기능</small></div>
+      <div><b>인스타그램</b><div class="good">운영 확인</div><small>@sura.chaeum</small></div>
+      <div><b>공식 블로그</b><div class="weak">미확인</div><small>개인 후기 노출 위주</small></div>
+      <div><b>유료광고</b><div class="mid">미확인</div><small>검색·SNS 광고 공개 흔적 없음</small></div>
+    </div>
+    <table>
+      <thead><tr><th>채널</th><th>현황</th><th>주요 활용</th><th>판정</th></tr></thead>
+      <tbody>
+        <tr><td>네이버플레이스</td><td>업체정보, 메뉴, 사진, 예약 노출</td><td>검색 → 정보확인 → 예약</td><td><span class="tag official">직접 운영 확인</span></td></tr>
+        <tr><td>인스타그램</td><td>공식 계정 @sura.chaeum, 팔로워 약 972명</td><td>상차림·반찬·매장·모임형 메시지</td><td><span class="tag official">직접 운영 확인</span></td></tr>
+        <tr><td>블로그/후기</td><td>개인 블로그 후기 다수 검색됨</td><td>오션뷰·가족모임·상견례·주차 강점 확산</td><td><span class="tag earned">자연노출/협찬 여부 미확인</span></td></tr>
+        <tr><td>배달 플랫폼</td><td>배민·쿠팡이츠 등 주문 가능 문구가 SNS에서 확인됨</td><td>포장·배달 판매</td><td><span class="tag official">공식 SNS 근거</span></td></tr>
+        <tr><td>페이스북</td><td>공식 페이지 미확인</td><td>-</td><td><span class="tag unknown">미확인</span></td></tr>
+        <tr><td>틱톡/유튜브</td><td>공식 채널 미확인</td><td>-</td><td><span class="tag unknown">미확인</span></td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="section">
+    <h2>3. 네이버플레이스 현황</h2>
+    <ul>
+      <li><b>위치:</b> 경기 시흥시 거북섬둘레길 10 일대, 정왕동 거북섬권.</li>
+      <li><b>영업정보:</b> 11:00~21:00, 브레이크타임 15:00~17:00로 확인되는 자료가 있음.</li>
+      <li><b>시설 강점:</b> 넓은 주차공간, 대형룸, 유아의자, 단체모임 대응.</li>
+      <li><b>예약:</b> 네이버 예약 기능을 활용하는 것으로 확인되며, 가족모임·상견례·단체룸 수요와 궁합이 좋음.</li>
+      <li><b>대표 메뉴:</b> 귀빈 한상차림, 코다리찜 한상차림, 평일 점심특선 등 가격대별 상품 구성이 확인됨.</li>
+      <li><b>사진 자산:</b> 입구, 실내, 상차림, 창가 오션뷰가 매장의 핵심 차별요소로 사용되고 있음.</li>
+    </ul>
+    <div class="callout"><strong>개선 포인트:</strong> 플레이스 소개문구를 “한정식” 중심이 아니라 <b>가족모임 · 부모님식사 · 상견례 · 단체룸 · 오션뷰 · 넓은 주차</b> 중심으로 재구성하면 방문 목적형 검색에서 전환력이 더 좋아질 가능성이 큽니다.</div>
+  </section>
+
+  <section class="section">
+    <h2>4. 인스타그램 운영 진단</h2>
+    <p><b>공식 계정:</b> @sura.chaeum</p>
+    <ul>
+      <li>팔로워 약 972명, 팔로잉 약 1,562명 수준으로 확인.</li>
+      <li>한정식 상차림, 기본 반찬, 매장 전경, 가족모임형 메시지를 반복적으로 노출.</li>
+      <li><b>#거북섬맛집 #시흥한정식맛집 #단체모임</b> 등 지역·상황형 해시태그 사용.</li>
+      <li>사진뿐 아니라 릴스 형태 콘텐츠도 활용하는 흔적이 있음.</li>
+    </ul>
+    <h3>현재 잘하는 점</h3>
+    <ul>
+      <li>“부모님과 함께 가는 식당”, “모임하기 좋은 한정식”이라는 고객 장면이 비교적 분명함.</li>
+      <li>상차림이 시각적으로 풍성해 이미지형 SNS와 궁합이 좋음.</li>
+    </ul>
+    <h3>아쉬운 점</h3>
+    <ul>
+      <li>단순 음식사진 비중이 높아질 경우 경쟁 매장과 차별화가 약해질 수 있음.</li>
+      <li>오션뷰, 룸, 주차, 상견례 동선, 부모님 생신 등 <b>‘방문 이유’를 설명하는 콘텐츠</b>를 더 늘릴 필요가 있음.</li>
+      <li>프로필에서 네이버 예약으로 바로 이동하는 전환 동선은 현장 확인이 필요.</li>
+    </ul>
+  </section>
+
+  <section class="section">
+    <h2>5. 블로그·검색노출 진단</h2>
+    <p>공식 네이버 블로그는 뚜렷하게 확인되지 않았고, 검색 결과는 개인 후기 콘텐츠가 중심입니다.</p>
+    <table>
+      <thead><tr><th>후기에서 반복되는 표현</th><th>마케팅 의미</th></tr></thead>
+      <tbody>
+        <tr><td>오션뷰 / 바다전망</td><td>거북섬 관광·데이트·가족 외식의 시각적 차별점</td></tr>
+        <tr><td>가족모임 / 부모님</td><td>핵심 타깃이 이미 후기 속에서 자연스럽게 형성됨</td></tr>
+        <tr><td>상견례 / 단체룸</td><td>고객단가가 높은 예약형 수요를 공략할 수 있음</td></tr>
+        <tr><td>넓은 주차</td><td>다인 가족·장년층·단체모임의 실제 구매장벽 해소 포인트</td></tr>
+        <tr><td>정갈함 / 친절함</td><td>한정식의 신뢰와 서비스 이미지를 강화</td></tr>
+      </tbody>
+    </table>
+    <div class="callout"><strong>검색 관점의 핵심:</strong> 현재 고객 후기가 이미 <b>“시흥 거북섬 가족모임 한정식”</b>이라는 강한 검색 키워드를 만들어 주고 있습니다. 공식 콘텐츠가 이 흐름을 받아주면 검색노출을 더 안정적으로 만들 수 있습니다.</div>
+  </section>
+
+  <section class="section">
+    <h2>6. 광고·프로모션 운영 현황</h2>
+    <table>
+      <thead><tr><th>항목</th><th>확인 결과</th><th>판정</th></tr></thead>
+      <tbody>
+        <tr><td>네이버 검색광고</td><td>공개 검색에서 뚜렷한 광고 노출 흔적을 확인하지 못함</td><td><span class="tag ad">유료광고 미확인</span></td></tr>
+        <tr><td>네이버 플레이스 광고</td><td>공개 검색 기준 확정하기 어려움</td><td><span class="tag unknown">확인 필요</span></td></tr>
+        <tr><td>인스타그램/메타 광고</td><td>광고 집행 여부를 공개 화면만으로 확정하기 어려움</td><td><span class="tag unknown">확인 필요</span></td></tr>
+        <tr><td>블로그 체험단/협찬</td><td>후기 포스팅은 있으나 협찬·대행 여부를 확정할 근거 부족</td><td><span class="tag earned">추정 금지</span></td></tr>
+        <tr><td>배달앱 할인/쿠폰</td><td>입점 문구는 확인되나 상시 프로모션 여부는 미확인</td><td><span class="tag unknown">확인 필요</span></td></tr>
+      </tbody>
+    </table>
+    <p><small>※ 광고는 광고계정 내부를 보지 않는 이상 공개 검색만으로 100% 확인할 수 없습니다. 현장 인터뷰에서 월 광고비와 대행사 사용 여부를 반드시 확인해야 합니다.</small></p>
+  </section>
+
+  <section class="section">
+    <h2>7. 리뷰·평판 관리</h2>
+    <ul>
+      <li>다이닝코드 등 제3자 리뷰에서 전반적으로 긍정 평가가 확인됨.</li>
+      <li>긍정 키워드: <b>가성비, 정갈함, 친절함, 가족모임, 건강식, 경관</b>.</li>
+      <li>미세한 개선 의견으로 솥밥 쌀 품질에 대한 언급이 확인됨.</li>
+      <li>공개된 리뷰에 운영자 답글이 활발한 흔적은 뚜렷하지 않음.</li>
+    </ul>
+    <div class="callout"><strong>가장 쉬운 개선:</strong> 신규 리뷰에 48시간 이내 답글을 달고, 답글 안에 “가족모임”, “거북섬”, “상견례”, “오션뷰” 같은 매장 핵심어를 자연스럽게 포함하면 신뢰·검색·재방문 모두에 도움이 됩니다.</div>
+  </section>
+
+  <section class="section">
+    <h2>8. 경쟁 관점에서 본 위치</h2>
+    <p>시흥 지역 유사 한정식점 3곳과 비교하면, 수라채움은 <b>인스타그램과 예약 채널 활용이 상대적으로 앞선 편</b>입니다. 반면 검색광고와 공식 블로그 자산은 아직 약합니다.</p>
+    <table>
+      <thead><tr><th>비교 항목</th><th>수라채움</th><th>일반 경쟁점</th></tr></thead>
+      <tbody>
+        <tr><td>SNS</td><td class="good">공식 인스타 운영</td><td>미운영 또는 소극적</td></tr>
+        <tr><td>네이버 예약</td><td class="good">활용 확인</td><td>업체별 편차 큼</td></tr>
+        <tr><td>공식 블로그</td><td class="weak">미확인</td><td>대부분 약함</td></tr>
+        <tr><td>검색광고</td><td class="mid">미확인</td><td>대부분 적극적이지 않음</td></tr>
+        <tr><td>차별자산</td><td class="good">오션뷰·룸·주차·모임형</td><td>맛·가격 중심</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="section">
+    <h2>9. 우선순위별 실행과제</h2>
+    <div class="priority">
+      <div class="pbox now">
+        <h3>즉시 실행</h3>
+        <ul>
+          <li>네이버플레이스 소개문구 전면 개편</li>
+          <li>최근 리뷰 전부 답글 달기</li>
+          <li>대표사진을 오션뷰 + 상차림 + 룸 중심으로 재정렬</li>
+          <li>인스타 프로필에 네이버예약 링크 고정</li>
+        </ul>
+      </div>
+      <div class="pbox m30">
+        <h3>30일</h3>
+        <ul>
+          <li>주 2회 콘텐츠: 부모님식사 / 상견례 / 생신 / 단체모임</li>
+          <li>네이버 블로그 또는 플레이스 소식 주 1회 발행</li>
+          <li>검색 키워드 5개 집중 관리</li>
+          <li>리뷰 요청용 테이블 안내문 제작</li>
+        </ul>
+      </div>
+      <div class="pbox m90">
+        <h3>90일</h3>
+        <ul>
+          <li>소액 네이버 검색·플레이스 광고 테스트</li>
+          <li>시흥·송도·안산 가족모임 수요까지 상권 확대</li>
+          <li>릴스: 상차림 15초 / 오션뷰 / 룸 투어 시리즈</li>
+          <li>광고 → 예약 → 방문 전환 측정 체계 만들기</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>10. 현장 인터뷰에서 꼭 확인할 질문</h2>
+    <div class="checklist">
+      <div class="check">□ 월 네이버 광고비가 있는가?</div>
+      <div class="check">□ 플레이스 광고 또는 파워링크를 집행하는가?</div>
+      <div class="check">□ 인스타그램은 대표가 직접 운영하는가?</div>
+      <div class="check">□ SNS/블로그 대행사가 있는가?</div>
+      <div class="check">□ 체험단·인플루언서 비용을 지출하는가?</div>
+      <div class="check">□ 월 네이버 예약 건수는 몇 건인가?</div>
+      <div class="check">□ 예약 고객 중 가족모임·상견례 비중은?</div>
+      <div class="check">□ 배달앱별 월 매출과 수수료는?</div>
+      <div class="check">□ 리뷰를 요청하는 현재 방법이 있는가?</div>
+      <div class="check">□ 가장 마진이 좋은 대표 메뉴는?</div>
+      <div class="check">□ 평일 점심과 주말의 고객구성이 다른가?</div>
+      <div class="check">□ 3개월간 가장 늘리고 싶은 고객은 누구인가?</div>
+    </div>
+  </section>
+
+  <section class="section sources">
+    <h2>11. 주요 확인 출처</h2>
+    <ul>
+      <li>네이버플레이스: <a href="https://map.naver.com/p/entry/place/1159852496" target="_blank" rel="noopener">수라채움 플레이스</a></li>
+      <li>인스타그램: <a href="https://www.instagram.com/sura.chaeum/" target="_blank" rel="noopener">@sura.chaeum</a></li>
+      <li>다이닝코드: <a href="https://www.diningcode.com/profile.php?rid=poZgPCCchj2y" target="_blank" rel="noopener">수라채움 리뷰 페이지</a></li>
+      <li>개인 후기 사례: <a href="https://imreal75.tistory.com/entry/%EA%B0%80%EC%A1%B1%EB%AA%A8%EC%9E%84%ED%95%9C%EC%A0%95%EC%8B%9D%EB%A7%9B%EC%A7%91-%EC%A3%BC%EC%B0%A8%EC%9E%A5%EB%84%93%EA%B3%A0%EC%98%A4%EC%85%98%EB%B7%B0-%EA%B3%A0%EA%B8%89%EC%8A%A4%EB%9F%B0%EB%B6%84%EC%9C%84%EA%B8%B0-%EC%88%98%EB%9D%BC%EC%B1%84%EC%9B%80" target="_blank" rel="noopener">가족모임 후기</a></li>
+      <li>개인 후기 사례: <a href="https://infoooo.tistory.com/20" target="_blank" rel="noopener">한정식 리뷰</a></li>
+    </ul>
+    <p><small>※ 본 보고서는 2026년 8월 16일 공개 웹정보를 기준으로 작성했습니다. 광고계정 내부 데이터, 네이버 스마트플레이스 관리자 통계, 배달앱 매출·프로모션 데이터는 사업자 확인이 필요합니다.</small></p>
+  </section>
+
+  <div class="foot">수라채움 온라인 마케팅 현황진단 · 소상공인 컨설팅용</div>
+</div>
+</body>
+</html>
