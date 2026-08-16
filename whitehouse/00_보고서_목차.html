@@ -1,0 +1,87 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>백악관사진관 HTML 보고서 모음</title>
+<style>
+:root{
+  --navy:#14385f; --navy2:#0f2d4f; --ink:#202833; --muted:#5f6875;
+  --cream:#fff8ec; --soft:#f5f8fb; --line:#d7dee6; --accent:#9a6534;
+  --good:#2f6b4f; --warn:#996900;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:#eef2f5;color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",Arial,sans-serif;
+  font-size:21px; line-height:1.75; letter-spacing:-0.015em;
+}
+.page{max-width:1080px;margin:0 auto;background:#fff;min-height:100vh;box-shadow:0 4px 24px rgba(0,0,0,.08)}
+header{background:linear-gradient(135deg,var(--navy2),var(--navy));color:white;padding:48px 52px}
+header .tag{font-size:17px;opacity:.86;margin-bottom:9px}
+header h1{font-size:40px;line-height:1.25;margin:0 0 16px;letter-spacing:-.035em}
+header p{font-size:21px;margin:0;opacity:.95}
+main{padding:42px 52px 64px}
+nav{
+  background:#f6f8fa;border:1px solid var(--line);border-radius:14px;
+  padding:18px 22px;margin-bottom:34px
+}
+nav b{display:block;color:var(--navy);margin-bottom:7px}
+nav a{color:var(--navy);text-decoration:none;margin-right:18px;white-space:nowrap;font-size:18px}
+section{margin:0 0 52px;scroll-margin-top:20px}
+h2{font-size:31px;line-height:1.35;color:var(--navy);border-bottom:4px solid var(--navy);padding-bottom:10px;margin:0 0 22px}
+h3{font-size:25px;color:var(--navy);margin:30px 0 12px}
+h4{font-size:22px;margin:22px 0 8px}
+p{margin:10px 0 18px}
+.lead{
+  background:var(--cream);border-left:7px solid var(--accent);border-radius:10px;
+  padding:24px 26px;font-size:24px;line-height:1.65;margin:18px 0 28px
+}
+.box{background:var(--soft);border:1px solid var(--line);border-radius:12px;padding:20px 24px;margin:16px 0}
+.callout{background:#f8fbff;border:2px solid #cad8e8;border-radius:12px;padding:22px 24px}
+.kicker{font-size:17px;color:var(--muted)}
+.big{font-size:27px;font-weight:800;color:var(--navy)}
+table{width:100%;border-collapse:separate;border-spacing:0;margin:18px 0 28px;font-size:18px;line-height:1.55}
+th,td{padding:14px 14px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);vertical-align:top}
+th{background:#eef3f7;color:var(--navy);font-weight:800}
+tr:first-child th:first-child{border-top-left-radius:10px}
+tr:first-child th:last-child{border-top-right-radius:10px}
+table{border-top:1px solid var(--line);border-left:1px solid var(--line);border-radius:10px;overflow:hidden}
+ul,ol{padding-left:28px}
+li{margin:8px 0}
+.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin:16px 0}
+.card{border:1px solid var(--line);border-radius:12px;padding:20px;background:#fff}
+.card b{display:block;color:var(--navy);font-size:21px;margin-bottom:5px}
+.poster{width:100%;border:1px solid var(--line);border-radius:12px;box-shadow:0 6px 20px rgba(0,0,0,.08);margin-top:14px}
+.note{font-size:17px;color:var(--muted)}
+.check{font-size:20px}
+.check div{margin:9px 0}
+.footer{background:#152236;color:#e3eaf2;padding:26px 52px 36px;font-size:16px}
+.print-btn{
+  display:inline-block;background:white;color:var(--navy);border-radius:999px;padding:10px 16px;
+  font-size:16px;font-weight:700;margin-top:20px
+}
+@media(max-width:720px){
+  body{font-size:19px;line-height:1.72;background:#fff}
+  .page{box-shadow:none}
+  header{padding:34px 22px}
+  header h1{font-size:32px}
+  header p{font-size:19px}
+  main{padding:28px 22px 48px}
+  h2{font-size:27px}
+  h3{font-size:23px}
+  .lead{font-size:21px;padding:20px}
+  .cards{grid-template-columns:1fr}
+  table{font-size:16px;display:block;overflow-x:auto;white-space:normal}
+  nav a{display:block;margin:5px 0}
+  .footer{padding:22px}
+}
+@media print{
+  body{background:#fff;font-size:16px}
+  .page{max-width:none;box-shadow:none}
+  header,main,.footer{padding-left:28px;padding-right:28px}
+  nav{display:none}
+  .print-btn{display:none}
+  section{break-inside:avoid}
+}
+</style>
+</head>
+<body><div class="page"><header><div class="tag">백악관사진관 · 보고서 모음</div><h1>온라인 마케팅 컨설팅 보고서</h1><p>대표님이 읽기 편하도록 보고서별로 나누고 큰 글씨로 구성했습니다.</p></header>
+<main><div class="lead">처음 보실 때는 <b>05 대표님용 핵심요약</b>부터 보시고, 필요할 때 상세 보고서를 열어보시는 순서를 권합니다.</div>
+<div class="cards"><div class="card"><b>01 온라인 마케팅 현황 심층분석</b><p>현재 온라인 상태를 먼저 파악하는 진단본</p><p><a href="01_온라인마케팅_현황_심층분석.html" style="font-size:20px;color:#14385f;font-weight:800">보고서 열기 →</a></p></div><div class="card"><b>02 개선전략 및 3개월 실행계획</b><p>앞으로 3개월의 실행 순서와 KPI</p><p><a href="02_개선전략_및_3개월_실행계획.html" style="font-size:20px;color:#14385f;font-weight:800">보고서 열기 →</a></p></div><div class="card"><b>03 네이버플레이스·콘텐츠 실행안</b><p>바로 복사·활용할 문구와 콘텐츠</p><p><a href="03_네이버플레이스_콘텐츠_실행안.html" style="font-size:20px;color:#14385f;font-weight:800">보고서 열기 →</a></p></div><div class="card"><b>04 경쟁 벤치마킹·포지셔닝</b><p>여주 경쟁구도와 차별화 방향</p><p><a href="04_경쟁_벤치마킹_포지셔닝.html" style="font-size:20px;color:#14385f;font-weight:800">보고서 열기 →</a></p></div><div class="card"><b>05 대표님용 핵심요약</b><p>가장 짧고 쉽게 보는 대표님용 요약</p><p><a href="05_대표님용_핵심요약.html" style="font-size:20px;color:#14385f;font-weight:800">보고서 열기 →</a></p></div></div></main><div class="footer">백악관사진관 온라인 마케팅 컨설팅 · HTML 보고서 모음</div></div></body></html>
